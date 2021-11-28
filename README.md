@@ -3,3 +3,5 @@
 Mentor: Michał Ćwiękała
 
 Uczestnicy:
+
+Filip Glura

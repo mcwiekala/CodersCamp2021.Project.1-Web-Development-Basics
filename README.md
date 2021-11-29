@@ -5,3 +5,4 @@ Mentor: Michał Ćwiękała
 Uczestnicy:
 
 Filip Glura
+Judyta Baca

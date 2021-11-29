@@ -6,3 +6,4 @@ Uczestnicy:
 
 Filip Glura
 Dawid Drzewiński
+Judyta Baca

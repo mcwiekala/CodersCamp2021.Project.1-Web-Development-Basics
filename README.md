@@ -6,6 +6,6 @@ Uczestnicy:
 
 Filip Glura
 Dawid Drzewiński
-Judyta Baca
+Judyta Baca :)
 Aleksandra Radwan
 Patryk Nowak

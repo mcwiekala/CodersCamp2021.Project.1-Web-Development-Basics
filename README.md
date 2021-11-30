@@ -5,7 +5,7 @@ Mentor: Michał Ćwiękała
 Uczestnicy:
 
 Filip Glura
-Dawid Drzewiński
+Dawid Drzewiński :)
 Judyta Baca :)
 Aleksandra Radwan
 Patryk Nowak

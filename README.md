@@ -10,3 +10,4 @@ Judyta Baca :)
 Aleksandra Radwan
 Patryk Nowak
 Sylwia Guzdek :)
+Magda Krzak

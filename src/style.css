@@ -6,3 +6,9 @@
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.bg-gray {
+  background-color: #343A40;
+  border: 1px solid #707070;
+  border-radius: 10px;
+}

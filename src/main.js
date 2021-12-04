@@ -1,6 +1,9 @@
 import './style.css';
+import Header from './header';
+
+new Header();
 
 document.querySelector('#app').innerHTML = `
-  <h1>Hello Vite!</h1>
+  <h1>Hello Vites</h1>
   <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
 `;

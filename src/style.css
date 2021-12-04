@@ -6,3 +6,21 @@
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.gotofilms {
+	display: inline-block;
+	padding: 2rem 2rem;
+	font-size: 2rem;
+	text-align: center;
+	align-items: center;
+	color: white;
+	background-color: #8a2be2;
+	border-radius: 2rem;
+	font-family: 'Verdana', sans-serif;
+	font-weight: bold;
+}
+
+.gotofilms:hover {
+	color: #8a2be2;
+	background-color: white;
+}

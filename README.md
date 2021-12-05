@@ -9,4 +9,5 @@ Dawid Drzewiński :)
 Judyta Baca :)
 Aleksandra Radwan
 Patryk Nowak
-Sylwia Guzdek :) 
+Sylwia Guzdek :)
+Magda Krzak

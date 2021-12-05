@@ -1,4 +1,5 @@
 import './style.css';
+import './header.css';
 import Header from './header';
 
 new Header();

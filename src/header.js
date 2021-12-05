@@ -33,7 +33,10 @@ class Header extends HTMLElement {
         <img class="header__logo" src="logo.svg" height="60">
         <nav class="header__nav">
           <ul class="header__nav-list">
-            ${this.links.map(link => `<li class="header__nav-item ${link.active ? 'header__nav-item--active' : ''}"><a class="header__nav-link" href="${link.href}">${link.name}</li>`).join("")}
+            ${this.links.map(link => 
+              `<li class="header__nav-item ${link.active ? 'header__nav-item--active' : ''}">
+                <a class="header__nav-link" href="${link.href}">${link.name}
+              </li>`).join("")}
           </ul>
         </nav>
       </header>

@@ -15,9 +15,7 @@
     "dev": "vite",
     "build": "vite build",
     "start": "vite preview",
-    "test": "echo \"Error: no test already implemented\" && exit 1",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "test": "echo \"Error: no test already implemented\" && exit 1"
   },
   "devDependencies": {
     "eslint": "7.32.0",

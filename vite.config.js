@@ -1,6 +1,6 @@
 const {resolve} = require("path");
 
-module.exports = defineConfig({
+module.exports = {
   build: {
     rollupOptions: {
       input: {
@@ -9,4 +9,4 @@ module.exports = defineConfig({
       },
     }
   }
-})
+}

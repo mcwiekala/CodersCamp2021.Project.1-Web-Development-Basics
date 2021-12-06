@@ -20,7 +20,7 @@
 
 /* BODY */
 * { 
-  margin: 5; 
+  margin: 0; 
   padding: 0;
   box-sizing: border-box;
 }
@@ -40,8 +40,7 @@ body {
 /* HEADERS */
 h1 {
   display: block;
-  font-size: 2em;
-  margin-top: 0.67em;
+  font-size: 3.5em;
   margin-bottom: 0.67em;
   margin-left: 0;
   margin-right: 0;
@@ -55,7 +54,7 @@ h2 {
   margin-bottom: 0.83em;
   margin-left: 0;
   margin-right: 0;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 h3 {
@@ -106,9 +105,21 @@ h6 {
 
 /* SECTIONS */ 
 
-.section {
+.main-text {
+  text-align: center;
+  padding: 120px 0;
+}
+
+.wrap {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10%;
+}
+
+.gray-section {
   background-color: var(--section-bg-color);
-  border-radius: 25px;
+  border: 1px solid #707070;
+  border-radius: 10px;
   padding: 25px;
 }
 

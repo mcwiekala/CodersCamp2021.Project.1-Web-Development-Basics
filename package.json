@@ -1,8 +1,6 @@
 {
-  "homepage": "https://mcwiekala.github.io/CodersCamp2021.Project.Web-Development-Basics",
-  "name": "MovieCollections",
-  "version": "1.0.0",
-  "main": "index.html",
+  "name": "project",
+  "version": "0.0.0",
   "private": true,
   "engines": {
     "node": "^14",
@@ -14,8 +12,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "start": "vite preview",
-    "test": "echo \"Error: no test already implemented\" && exit 1"
+    "start": "vite preview"
   },
   "devDependencies": {
     "eslint": "7.32.0",
@@ -23,10 +20,7 @@
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-import": "2.24.2",
     "eslint-plugin-prettier": "4.0.0",
-    "gh-pages": "^3.2.3",
     "prettier": "2.4.1",
     "vite": "2.5.10"
-  },
-  "author": "Michal Cwiekala's Team on Coders Camp 2021",
-  "license": "MIT"
+  }
 }

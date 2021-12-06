@@ -127,7 +127,12 @@ h6 {
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  border-radius: 2em;
   font-size: 1em;
+  font-weight: bold;
 }
 
-
+.button:hover {
+	color: var(--purple);
+	background-color: white;
+}

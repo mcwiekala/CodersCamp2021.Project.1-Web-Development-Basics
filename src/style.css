@@ -136,7 +136,7 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 60px;
+  height: 80px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -150,12 +150,12 @@ footer {
 }
 
 .logo-footer {
-  height: 40px;
+  height: 30px;
   opacity: 60%;
+  transition: all 1s ease-in-out;
 }
 
 .logo-footer:hover {
-  height: 40px;
   opacity: 100%;
 }
 

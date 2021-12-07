@@ -1,5 +1,6 @@
 import sheet from './style.css';
 import './header.css';
+import './footer.css';
 import Header from './header';
 import Footer from "./footer.js";
 new Header();

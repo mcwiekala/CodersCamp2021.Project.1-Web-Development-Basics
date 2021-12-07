@@ -130,33 +130,3 @@ h6 {
   font-size: 1em;
 }
 
-/* FOOTER*/
-
-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 80px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.social-row{
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-}
-
-.logo-footer {
-  height: 30px;
-  opacity: 60%;
-  transition: all 1s ease-in-out;
-}
-
-.logo-footer:hover {
-  opacity: 100%;
-}
-
-/* FOOTER*/

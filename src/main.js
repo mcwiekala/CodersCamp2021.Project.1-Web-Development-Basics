@@ -1,8 +1,7 @@
-import sheet from './style.css' assert { type: 'css' };
-import Footer from "./footer.js";
-document.adoptedStyleSheets = [sheet];
+import sheet from './style.css';
 import './header.css';
 import Header from './header';
+import Footer from "./footer.js";
 new Header();
 document.querySelector('#app').innerHTML = `
   <h1>Hello Vites</h1>

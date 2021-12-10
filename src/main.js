@@ -3,25 +3,18 @@ document.querySelector('#app').innerHTML = `
   <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
 `;
 
-
-// DATA FROM 250 BEST MOVIES
-fetch("https://imdb-api.com/en/API/Top250Movies/k_yju1poqs/")
-    .then(result => result.json())
-    .then(({items}) => {                // <---- items destructurized from data
-        for (item of items.slice(10, 20)) {
-            console.log(item.title, item.year, item.id)
-        }
-    })
+const instance = axios.create({
+    baseURL: 'http://www.omdbapi.com/',
+  });
 
 
+const moviesId = ["tt0816692", "tt0103064", "tt1675434", "tt0910970", "tt4633694", "tt1675434", "tt0078748", "tt1446714", "tt3896198", "tt1160419"];
 
-// DATA FROM SINGLE MOVIE
-fetch("https://imdb-api.com/en/API/Title/k_yju1poqs/tt0068646")
-    .then(result => result.json())
-    .then(data => {
-        console.log(`${data.title}
-${data.year}
-${data.image}
-${data.id}`)
-    })
-    
+const getMovies = async() => {
+    for(movieId of moviesId) {
+        const response = await instance.get(`?i=${movieId}&apikey=46e8c41c`);
+        console.log(response.data);
+    }
+}
+
+getMovies();

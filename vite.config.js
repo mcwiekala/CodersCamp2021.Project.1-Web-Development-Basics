@@ -7,6 +7,7 @@ const root = resolve(__dirname, 'src')
 const outDir = resolve(__dirname, 'dist')
 
 module.exports = defineConfig({
+  base: '/CodersCamp2021.Project.Web-Development-Basics/',
   root,
   build: {
     outDir,
@@ -19,5 +20,5 @@ module.exports = defineConfig({
       }
     }
   },
-  publicDir: resolve(__dirname, 'public'),
+  publicDir: resolve(__dirname, 'src/public'),
 })

@@ -19,6 +19,5 @@ module.exports = defineConfig({
         about: resolve(root, 'pages', 'about', 'index.html'),
       }
     }
-  },
-  publicDir: resolve(__dirname, 'src/public'),
+  }
 })

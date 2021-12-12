@@ -1,10 +1,6 @@
-import './style.css';
-import './header.css';
-import Header from './header';
+import sheet from './style.css';
+import './components/header/header.css';
+import './components/footer/footer.css';
+import Header from './components/header/header';
+import Footer from "./components/footer/footer";
 
-new Header();
-
-document.querySelector('#app').innerHTML = `
-  <h1>Hello Vites</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`;

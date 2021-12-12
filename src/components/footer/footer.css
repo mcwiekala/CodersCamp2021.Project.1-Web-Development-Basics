@@ -1,0 +1,26 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer__nav-link{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+  
+  .footer__logo {
+    height: 30px;
+    opacity: 60%;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .footer__logo:hover {
+    opacity: 100%;
+  }

@@ -14,9 +14,10 @@ module.exports = defineConfig({
     rollupOptions: {
       input: {
         main: resolve(root, 'index.html'),
-        about: resolve(root, 'pages/developersGuide', 'developers-guide.html'),
-        // privacy: resolve(root, 'privacy', 'index.html') 
+        developersGuide: resolve(root, 'pages', 'developers-guide', 'index.html'),
+        about: resolve(root, 'pages', 'about', 'index.html'),
       }
     }
-  }
+  },
+  publicDir: resolve(__dirname, 'public'),
 })

@@ -30,7 +30,7 @@ class Header extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <header class="header">
-        <img class="header__logo" src="../images/logo.svg" height="60">
+        <img class="header__logo" src="/logo.svg" height="60">
         <nav class="header__nav">
           <ul class="header__nav-list">
             ${this.links.map(link => 

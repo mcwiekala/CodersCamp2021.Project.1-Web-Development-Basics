@@ -18,7 +18,7 @@ footer {
   .footer__logo {
     height: 30px;
     opacity: 60%;
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   
   .footer__logo:hover {

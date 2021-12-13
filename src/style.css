@@ -1,8 +1,123 @@
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+/* MAIN VARIABLES & COLORS */
+:root { 
+  --main-bg-color: #23272b; 
+  --section-bg-color: #343a40;
+  --footer-bg-color: #7A7E83;
+  --purple: #7723CB;
+  --text-color-light: #fff;
+  --text-color-dark: #000;
+
 }
+
+/* BODY */
+* { 
+  margin: 5;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ /* FONT WEIGHT GUIDE: 
+  regular - 400
+  bold - 700 
+  black - 900 */ 
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  background-color: var(--main-bg-color);
+  color: var(--text-color-light);
+}
+
+/* HEADERS */
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 900;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 700;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 700;
+}
+
+h4 {
+  display: block;
+  font-size: 1em;
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 700;
+}
+
+h5 {
+  display: block;
+  font-size: .83em;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 700;
+}
+
+h6 {
+  display: block;
+  font-size: .67em;
+  margin-top: 2.33em;
+  margin-bottom: 2.33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 700;
+}
+
+/* COLOR VARIATIONS */
+
+.text-purple { 
+  color: var(--purple);
+}
+
+/* SECTIONS */ 
+
+.section {
+  background-color: var(--section-bg-color);
+  border-radius: 25px;
+  padding: 25px;
+}
+
+.footer {
+  background-color: var(--footer-bg-color);
+  padding: 25px;
+}
+
+/* BUTTONS */
+
+.button {
+  background-color: var(--purple); 
+  border: none;
+  color: var(--text-color-light);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+}
+

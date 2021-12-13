@@ -31,9 +31,7 @@ body {
 /* HEADERS */
 h1 {
   display: block;
-  font-size: 2em;
-  margin-top: 0.67em;
-  margin-bottom: 0.67em;
+  font-size: 3.5em;
   margin-left: 0;
   margin-right: 0;
   font-weight: 900;
@@ -46,7 +44,7 @@ h2 {
   margin-bottom: 0.83em;
   margin-left: 0;
   margin-right: 0;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 h3 {
@@ -97,10 +95,23 @@ h6 {
 
 /* SECTIONS */ 
 
-.section {
+.main-content {
+  margin: 0 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 120px 0;
+}
+
+.gray-section {
   background-color: var(--section-bg-color);
-  border-radius: 25px;
-  padding: 25px;
+  border: 1px solid #707070;
+  border-radius: 10px;
+}
+
+.small-box {
+  max-width: 650px;
 }
 
 .footer {

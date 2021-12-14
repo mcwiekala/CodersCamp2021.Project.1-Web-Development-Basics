@@ -17,6 +17,7 @@ module.exports = defineConfig({
         main: resolve(root, 'index.html'),
         developersGuide: resolve(root, 'pages', 'developers-guide', 'index.html'),
         about: resolve(root, 'pages', 'about', 'index.html'),
+        movieDetails: resolve(root, 'pages', 'movie-details', 'index.html'),
       }
     }
   }

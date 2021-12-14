@@ -20,7 +20,8 @@ module.exports = defineConfig({
           'developers-guide',
           'index.html',
         ),
-      },
-    },
-  },
-});
+        movieDetails: resolve(root, 'pages', 'movie-details', 'index.html'),
+      }
+    }
+  }
+})

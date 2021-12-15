@@ -30,5 +30,8 @@
     "vite": "2.5.10"
   },
   "author": "Michal Cwiekala's Team on Coders Camp 2021",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.24.0"
+  }
 }

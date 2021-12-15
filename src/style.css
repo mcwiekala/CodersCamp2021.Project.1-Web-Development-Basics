@@ -1,25 +1,24 @@
 /* MAIN VARIABLES & COLORS */
-:root { 
-  --main-bg-color: #23272b; 
+:root {
+  --main-bg-color: #23272b;
   --section-bg-color: #343a40;
-  --footer-bg-color: #7A7E83;
-  --purple: #7723CB;
+  --footer-bg-color: #7a7e83;
+  --purple: #7723cb;
   --text-color-light: #fff;
   --text-color-dark: #000;
-
 }
 
 /* BODY */
-* { 
-  margin: 5;
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
- /* FONT WEIGHT GUIDE: 
+/* FONT WEIGHT GUIDE: 
   regular - 400
   bold - 700 
-  black - 900 */ 
+  black - 900 */
 
 body {
   font-family: 'Lato', sans-serif;
@@ -31,9 +30,7 @@ body {
 /* HEADERS */
 h1 {
   display: block;
-  font-size: 2em;
-  margin-top: 0.67em;
-  margin-bottom: 0.67em;
+  font-size: 3.5em;
   margin-left: 0;
   margin-right: 0;
   font-weight: 900;
@@ -46,7 +43,7 @@ h2 {
   margin-bottom: 0.83em;
   margin-left: 0;
   margin-right: 0;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 h3 {
@@ -71,7 +68,7 @@ h4 {
 
 h5 {
   display: block;
-  font-size: .83em;
+  font-size: 0.83em;
   margin-top: 1.67em;
   margin-bottom: 1.67em;
   margin-left: 0;
@@ -81,7 +78,7 @@ h5 {
 
 h6 {
   display: block;
-  font-size: .67em;
+  font-size: 0.67em;
   margin-top: 2.33em;
   margin-bottom: 2.33em;
   margin-left: 0;
@@ -91,11 +88,30 @@ h6 {
 
 /* COLOR VARIATIONS */
 
-.text-purple { 
+.text-purple {
   color: var(--purple);
 }
 
-/* SECTIONS */ 
+/* SECTIONS */
+
+.main-content {
+  margin: 0 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 120px 0;
+}
+
+.small-box {
+  max-width: 650px;
+}
+
+.gray-section {
+  background-color: var(--section-bg-color);
+  border: 1px solid #707070;
+  border-radius: 10px;
+}
 
 .section {
   background-color: var(--section-bg-color);
@@ -111,7 +127,7 @@ h6 {
 /* BUTTONS */
 
 .button {
-  background-color: var(--purple); 
+  background-color: var(--purple);
   border: none;
   color: var(--text-color-light);
   padding: 15px 32px;
@@ -120,4 +136,3 @@ h6 {
   display: inline-block;
   font-size: 1em;
 }
-

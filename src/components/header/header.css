@@ -1,12 +1,12 @@
 /* Header */
 .header {
-  background-color: #23272B;
+  background-color: #23272b;
   display: flex;
   max-width: 1920px;
   padding: 40px;
   align-items: center;
 }
-  
+
 .header__logo {
   margin-right: 2.5rem;
 }
@@ -25,7 +25,7 @@
 }
 
 .header__nav-item--active {
-  background-color: #8823EC;
+  background-color: #8823ec;
 }
 
 .header__nav-link {
@@ -42,7 +42,7 @@
   left: 0;
   height: 2px;
   width: 0;
-  background-color: #8823EC;
+  background-color: #8823ec;
   transition: all 0.2s ease;
 }
 

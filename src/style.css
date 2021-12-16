@@ -157,6 +157,7 @@ h6 {
   right: 50%;
   bottom: 0;
   opacity: 0;
+  content: '';
 }
 .btn-primary:hover:before {
   transition: 0.5s all ease;

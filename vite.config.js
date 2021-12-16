@@ -1,6 +1,6 @@
-const { resolve } = require('path');
 import { defineConfig } from 'vite';
-const path = require('path');
+
+const { resolve } = require('path');
 
 const root = resolve(__dirname, 'src');
 const outDir = resolve(__dirname, 'dist');

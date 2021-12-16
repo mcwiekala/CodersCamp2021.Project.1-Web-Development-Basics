@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
+import axios from 'axios';
 import sheet from './style.css';
 import './components/header/header.css';
 import './components/footer/footer.css';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
-import axios from 'axios';
 
 const apiKey = '46e8c41c';
 const instance = axios.create({

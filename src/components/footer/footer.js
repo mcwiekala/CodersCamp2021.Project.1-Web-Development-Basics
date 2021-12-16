@@ -1,5 +1,5 @@
-import codersCampImage from '/images/CodersCamp.png';
-import githubImage from '/images/GitHub.png';
+import codersCampImage from '../../images/CodersCamp.png';
+import githubImage from '../../images/GitHub.png';
 
 class Footer extends HTMLElement {
   connectedCallback() {

@@ -1,6 +1,6 @@
 .collection {
     margin: auto;
-    width: 80%;
+    width: 70%;
     
     display: flex;
     flex-direction: column;
@@ -12,7 +12,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
 }
 .collection__images {
     height: 150px;
@@ -30,25 +30,66 @@
 }
 
 .collection__progress {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: stretch;
     margin-left: 30px;
-    height: 30px;
-    width: 300PX;
-    border: 1px solid var(--purple);
-    align-self: center;
-    background-color: var(--purple);
-    flex-grow: 1;
+    width: 100%;
+    height: 150px;
 }
+
+.collection__progress_name{
+    align-self: start;
+    flex-grow: 1;
+    font-weight: bold;
+}
+
+.collection__progress_text {
+    align-self: start;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+#collection__progress_bar {
+    background-color: black;
+  border-radius: 15px;
+  /* (height of inner div) / 2 + padding */
+  padding: 3px;
+}
+
+#collection__progress_bar>div {
+    background-color: #14d9bf;
+    width: 40%;
+    /* Adjust with JavaScript */
+    height: 20px;
+    border-radius: 10px;
+  }
 
 .collection__bottom-details {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    flex-grow: 1;
+}
+.collection__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
 }
 
-.collection__list {
-    list-style: none;
+.collection__list_pos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0px 10px;
+   
+}
+
+.collection__list_pos>ul {
+    text-align: left;
 }
 
 .collection__button {

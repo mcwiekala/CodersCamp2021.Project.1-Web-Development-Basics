@@ -224,7 +224,7 @@ h6 {
 
 /* BUTTONS */
 
-.button {
+.btn-primary {
   background-color: var(--purple);
   border: none;
   color: var(--text-color-light);
@@ -233,4 +233,34 @@ h6 {
   text-decoration: none;
   display: inline-block;
   font-size: 1em;
+  border-radius: 1em;
+  position: relative;
+  font-weight: bold;
+  transition: ease-out 0.3s;
+  z-index: 1;
+}
+
+.btn-primary:hover {
+  color: var(--purple);
+  cursor: pointer;
+}
+
+.btn-primary:before {
+  background-color: var(--text-color-light);
+  border-radius: 1em;
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+}
+.btn-primary:hover:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
 }

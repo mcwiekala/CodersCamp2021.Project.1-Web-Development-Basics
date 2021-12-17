@@ -24,8 +24,8 @@
     flex-shrink: 0;
 }
 .collection__images > img {
-    width: 45%;
-    object-fit: cover;
+    width: 30%;
+    object-fit: fill;
     margin: 2px;
 }
 
@@ -53,9 +53,9 @@
 
 #collection__progress_bar {
     background-color: black;
-  border-radius: 15px;
-  /* (height of inner div) / 2 + padding */
-  padding: 3px;
+    border-radius: 15px;
+     /* (height of inner div) / 2 + padding */
+    padding: 3px;
 }
 
 #collection__progress_bar>div {

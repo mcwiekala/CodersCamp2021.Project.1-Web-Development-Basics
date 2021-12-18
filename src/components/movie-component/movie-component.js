@@ -3,7 +3,7 @@ const templateStyle = document.createElement('template-style')
 templateStyle.innerHTML = `
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        @import "style.css"
+        @import "../../style.css"
     </style>
 `
 
@@ -49,7 +49,7 @@ const template = document.createElement('div');
     // WATCHED BUTTON
         const watchedButton = document.createElement('img');
         watchedButton.classList.add('watched-button');
-        watchedButton.setAttribute("src", "../img/watched-button.png");
+        watchedButton.setAttribute("src", "../../images/watched-button.png");
         watchedDiv.appendChild(watchedButton); 
     opacityDiv.appendChild(watchedDiv);
 
@@ -61,15 +61,15 @@ class MovieComponent extends HTMLElement {
 
         this.attachShadow({mode: "open"})
         this.shadowRoot.appendChild(templateStyle)
-        this.shadowRoot.appendChild(template) //.content.cloneNode(true)
+        this.shadowRoot.appendChild(template) 
     }
 
     markWatched() {
         let watchedTick = this.shadowRoot.querySelector('.watched-button');
-        if (watchedTick.getAttribute('src') === '../img/watched-button.png') {
-            watchedTick.setAttribute('src', '../img/watched-button-green.png');
+        if (watchedTick.getAttribute('src') === '../../images/watched-button.png') {
+            watchedTick.setAttribute('src', '../../images/watched-button-green.png');
         } else {
-            watchedTick.setAttribute('src', '../img/watched-button.png');
+            watchedTick.setAttribute('src', '../../images/watched-button.png');
     };
     }
 

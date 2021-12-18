@@ -20,6 +20,12 @@ module.exports = defineConfig({
           'developers-guide',
           'index.html',
         ),
+        films: resolve(
+          root,
+          'pages',
+          'films',
+          'index.html',
+        ),
       },
     },
   },

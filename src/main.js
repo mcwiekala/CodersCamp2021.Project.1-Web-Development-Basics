@@ -28,3 +28,33 @@ moviesId.forEach(async (movieId) => {
   const response = await instance.get(`?i=${movieId}&apikey=${apiKey}`);
   console.log(response.data);
 });
+
+const romanticWeekendMoviesId = [
+  'tt1243957',
+  'tt0120338',
+  'tt11867884',
+  'tt2452244',
+  'tt7453044',
+  'tt2151010',
+  'tt0376541',
+];
+
+const bestBritishMoviesId = [
+  'tt0116209',
+  'tt0117951',
+  'tt0127536',
+  'tt0109831',
+  'tt0085859',
+  'tt0082158',
+  'tt0119164',
+];
+
+const bestOf2021MoviesId = [
+  'tt10370710',
+  'tt0067372',
+  'tt14039582',
+  'tt6817944',
+  'tt8633462',
+  'tt11271038',
+  'tt8430054',
+];

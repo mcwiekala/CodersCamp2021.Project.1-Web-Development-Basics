@@ -1,0 +1,35 @@
+.collections-list__box {
+  display: flex;
+  padding: 40px;
+  margin: 0 20% 4%;
+}
+
+.purple-section {
+  background-color: var(--purple);
+}
+
+.image {
+  height: 120px;
+  width: 77px;
+}
+
+.image:nth-child(-n + 3) {
+  margin-bottom: 4px;
+}
+
+.collections-list__images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 240px;
+}
+
+.collections-list__details {
+  margin-left: 20px;
+}
+
+.collections-list__title {
+  font-size: 1.5em;
+  font-weight: bold;
+}

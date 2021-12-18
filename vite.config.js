@@ -18,15 +18,14 @@ module.exports = defineConfig({
           root,
           'pages',
           'developers-guide',
-          'index.html'
+          'index.html',
         ),
         collectionDetails: resolve(
           root,
           'pages',
           'collection-details',
-          'index.html'
+          'index.html',
         ),
-        about: resolve(root, 'pages', 'about', 'index.html'),
       },
     },
   },

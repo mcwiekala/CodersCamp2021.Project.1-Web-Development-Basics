@@ -5,6 +5,7 @@ import './components/header/header.css';
 import './components/footer/footer.css';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
+import MovieComponent2 from './components/movie-component/movie-component-2';
 
 const apiKey = '46e8c41c';
 const instance = axios.create({

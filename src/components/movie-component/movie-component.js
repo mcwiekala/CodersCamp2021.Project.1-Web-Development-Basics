@@ -1,67 +1,36 @@
-// APPEND STYLES
-const templateStyle = document.createElement('template-style');
-templateStyle.innerHTML = `
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        @import "../../style.css"
-    </style>
-`;
-
-// CREATE COMPONENT CONTAINER
-const template = document.createElement('div');
-const movieDiv = document.createElement('div');
-movieDiv.classList.add('movie');
-// CREATE OPACITY DIV FOR INFO SECTION
-const opacityDiv = document.createElement('div');
-opacityDiv.classList.add('opacity');
-movieDiv.appendChild(opacityDiv);
-// CREATE INFO ABOUT MOVIE SECTION
-const infoDiv = document.createElement('div');
-infoDiv.classList.add('info');
-// RATING STARS
-const ratingStars = document.createElement('div');
-ratingStars.classList.add('rating-stars');
-for (let i = 0; i < 5; i += 1) {
-  const star = document.createElement('span');
-  star.classList.add('fa', 'fa-star', 'checked');
-  ratingStars.appendChild(star);
-}
-infoDiv.appendChild(ratingStars);
-// MOVIE TITLE
-const movieTitle = document.createElement('h4');
-movieTitle.classList.add('movie-title');
-movieTitle.innerText = 'AVENGERS: End Game';
-infoDiv.appendChild(movieTitle);
-// MOVIE DESCRIPTION
-const movieDescription = document.createElement('h5');
-movieDescription.classList.add('movie-description');
-movieDescription.innerHTML = 'Action | 120min | 2021';
-infoDiv.appendChild(movieDescription);
-// ADD TO MY COLLECTION BUTTON
-const addCollectionButton = document.createElement('button');
-addCollectionButton.classList.add('add-collection-button');
-addCollectionButton.innerText = '+ MY COLLECTION';
-infoDiv.appendChild(addCollectionButton);
-opacityDiv.appendChild(infoDiv);
-// CREATE BUTTONS SECTION NEXT TO INFO ABOUT MOVIE
-const watchedDiv = document.createElement('div');
-watchedDiv.classList.add('watched-div');
-// WATCHED BUTTON
-const watchedButton = document.createElement('img');
-watchedButton.classList.add('watched-button');
-watchedButton.setAttribute('src', '../../images/watched-button.png');
-watchedDiv.appendChild(watchedButton);
-opacityDiv.appendChild(watchedDiv);
-
-template.appendChild(movieDiv);
+const template = document.createElement('template');
+template.innerHTML = `
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+      @import "../../style.css"
+  </style>
+  <div class="movie">
+    <div class="opacity">
+      <div class="info">
+        <span class="rating-stars">
+          <span class="fa fa-star checked">
+          </span>
+          <span class="fa fa-star checked">
+          </span>
+          <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>
+        </span>
+        <h4 class="movie-title">AVENGERS: End Game</h4>
+        <h5 class="movie-description">Action | 120min | 2021</h5>
+        <button class="add-collection-button">+ MY COLLECTION</button>
+      </div>
+      <div class="watched-div">
+        <img class="watched-button" src="../../images/watched-button.png">
+      </div>
+    </div>
+</div>
+`
 
 class MovieComponent extends HTMLElement {
   constructor() {
     super();
 
     this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(templateStyle);
-    this.shadowRoot.appendChild(template);
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
   }
 
   markWatched() {
@@ -97,4 +66,4 @@ class MovieComponent extends HTMLElement {
   }
 }
 
-window.customElements.define('comp-movie', MovieComponent);
+window.customElements.define('movie-component', MovieComponent);

@@ -20,6 +20,12 @@ module.exports = defineConfig({
           'developers-guide',
           'index.html',
         ),
+        collectionsList: resolve(
+          root,
+          'pages',
+          'collections-list',
+          'index.html',
+        ),
       },
     },
   },

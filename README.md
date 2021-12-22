@@ -1,6 +1,6 @@
-# Web-Development-Basics
+# Film Book
 
-Projekt do przeglądania filmów oaprty o:
+Projekt do przeglądania filmów oparty o:
 
 https://imdb-api.com
 

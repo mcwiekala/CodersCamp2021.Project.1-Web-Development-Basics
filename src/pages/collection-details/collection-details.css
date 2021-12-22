@@ -15,7 +15,7 @@
   align-items: end;
 }
 
-.collection__images {
+.collection__image {
   height: 150px;
   width: 150px;
   display: flex;
@@ -23,12 +23,17 @@
   justify-content: center;
   border: 2px solid var(--purple);
   flex-shrink: 0;
+  overflow: hidden;
 }
 
-.collection__images > img {
-  width: 30%;
-  object-fit: fill;
-  margin: 2px;
+.collection__image > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.collection__image:hover > img {
+  width: 100%;
+  object-fit: cover;
 }
 
 .collection__progress {
@@ -55,13 +60,12 @@
 
 #collection__progress_bar {
   background-color: black;
-  border-radius: 15px;
-  /* (height of inner div) / 2 + padding */
+  border-radius: 16px;
   padding: 3px;
 }
 
 #collection__progress_bar > div {
-  background-color: #14d9bf;
+  background-color: var(--progress-bar-color);
   width: 55%;
   /* Adjust with JavaScript */
   height: 20px;

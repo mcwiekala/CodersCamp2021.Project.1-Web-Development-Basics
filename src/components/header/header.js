@@ -7,18 +7,18 @@ class Header extends HTMLElement {
     this.links = [
       {
         name: 'Home',
-        href: 'home.html',
-        active: this.checkPathname('index.html'),
+        href: 'home/',
+        active: this.checkPathname('home'),
       },
       {
         name: 'Films',
-        href: 'films.html',
-        active: this.checkPathname('films.html'),
+        href: 'pages/films/',
+        active: this.checkPathname('films'),
       },
       {
         name: 'Collections',
-        href: 'collections.html',
-        active: this.checkPathname('collections.html'),
+        href: 'pages/collection-details/',
+        active: this.checkPathname('collection-details'),
       },
     ];
   }
@@ -26,7 +26,13 @@ class Header extends HTMLElement {
   // eslint-disable-next-line class-methods-use-this
   checkPathname(path) {
     const pathname = window.location.pathname.split('/');
-    return pathname[1] === path;
+    return pathname[pathname.length - 2] === path;
+    // If we delete with last '/' from adres then should be 'pathname.length - 1'
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  hrefJoin(href) {
+    return window.location.href.slice(0, window.location.href.search('Web-Development-Basics') + 23) + href
   }
 
   /* eslint-disable */
@@ -42,7 +48,7 @@ class Header extends HTMLElement {
                   `<li class="header__nav-item ${
                     link.active ? 'header__nav-item--active' : ''
                   }">
-                    <a class="header__nav-link" href="${link.href}">${link.name}
+                    <a class="header__nav-link" href="${this.hrefJoin(link.href)}">${link.name}
                   </li>`
               )
               .join('')}

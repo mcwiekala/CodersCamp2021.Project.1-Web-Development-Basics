@@ -2,8 +2,9 @@
 :root {
   --main-bg-color: #23272b;
   --section-bg-color: #343a40;
-  --footer-bg-color: #7a7e83;
-  --purple: #7723cb;
+  --movie-opacity-color: #00000091;
+  --footer-bg-color: #7A7E83;
+  --purple: #7723CB;
   --text-color-light: #fff;
   --text-color-dark: #000;
 }
@@ -92,7 +93,7 @@ h6 {
   color: var(--purple);
 }
 
-/* SECTIONS */
+/* SECTIONS OF MOVIE COMPONENT */ 
 
 .main-content {
   margin: 0 10%;
@@ -123,6 +124,103 @@ h6 {
   background-color: var(--footer-bg-color);
   padding: 25px;
 }
+
+.watched-button {
+ display: flex;
+ flex-direction: column; 
+ padding-top: 15px;
+ padding-right: 10px;
+}
+
+  /* BUTTONS: ADD COLLECTION */
+
+  .add-collection-button {
+    color: var(--text-color-light);
+    text-transform: uppercase;
+    text-decoration: none;
+    background: transparent;
+    border-radius: 5px;
+    padding: 6px;
+    width: 200px;
+    margin-left: 5px;
+    margin-top: 10px;
+    font-size: 0.7rem;
+    border: 1px solid;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+  }
+
+  .added-movie {
+    color: var(--text-color-light);
+    background: #13663c;
+    border-color: #13663c;
+    border-radius: 5px;
+    transition: all 0.3s ease 0s;
+  }
+
+  /* BUTTONS: WATCHED TICKED */
+
+  .watched-button {
+    width: 40px;
+    height: auto;
+  }
+
+
+  /* MOVIE COMPONENT STYLES */
+
+  .movie {
+    height: 400px;
+    width: 300px;
+    border-radius: 10px;
+    background-image: url(./images/Avengers_Endgame_poster_035_Textless.jpg);
+    background-size: 100%;
+    display: flex;
+    align-items:flex-end
+  }
+
+  .opacity {
+    height: 135px;
+    width: 300px;
+    margin-bottom: 20px;
+    border-bottom-right-radius:  10px;
+    border-bottom-left-radius: 10px;
+    background-color: var(--movie-opacity-color);
+    display: flex; 
+    justify-content: space-between;
+
+
+  }
+
+  .info {
+    color: var(--text-color-light);
+    padding-left: 15px;
+    padding-top: 15px;
+    
+
+  }
+
+  .movie-title {
+    font-family: 'Lato', sans-serif;
+    margin: 5px;
+  }
+
+  .movie-description {
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    margin: 5px;
+  }
+
+
+  /* RATING STARS */
+  .rating-stars {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    padding: 5px 5px 5px 8px
+  }
+  .checked {
+    color: orange;
+  }
 
 /* BUTTONS */
 

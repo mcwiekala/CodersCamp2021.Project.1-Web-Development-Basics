@@ -27,12 +27,13 @@ class Header extends HTMLElement {
   checkPathname(path) {
     const pathname = window.location.pathname.split('/');
     return pathname[pathname.length - 2] === path;
-    // If we delete with last '/' from adres then should be 'pathname.length - 1'
   }
 
   // eslint-disable-next-line class-methods-use-this
   hrefJoin(href) {
-    return window.location.href.slice(0, window.location.href.search('Web-Development-Basics') + 23) + href
+    const primaryHref = 'Web-Development-Basics/';
+    return window.location.href.slice(0, window.location.href.search(primaryHref)
+      + primaryHref.length) + href;
   }
 
   /* eslint-disable */

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Films</title>
     <script type="module" src="../../main.js"></script>
-    <link rel="stylesheet" href="./films.css" />
+    <!-- <link rel="stylesheet" href="./films.css" /> -->
     <link rel="stylesheet" href="../../style.css" />
 
     <!-- LINK TO DEFAULT STYLESHEET -->
@@ -24,21 +24,22 @@
   </head>
   <body>
     <header-component></header-component>
-    <h1>FILMS</h1>
-    <movie-component></movie-component>
-    <movie-component></movie-component>
-    <movie-component></movie-component>
-    <movie-component></movie-component>
-    <movie-component></movie-component>
-    <br />
+    <main>
+      <div class="movie-wrapper">
+        <div class="header-wrapper">
+          <h1 class="text-purple movie-section-header">FILMS</h1>
+        </div>
+        <div class="section movies-section">
+          <movie-component></movie-component>
+          <movie-component></movie-component>
+          <movie-component></movie-component>
+        </div>
+      </div>
+    </main>
 
-    <!-- <movie-component-2></movie-component-2>
-    <movie-component-2></movie-component-2>
-    <movie-component-2></movie-component-2> -->
 
     <footer-component></footer-component>
 
     <script src="../../components/movie-component/movie-component.js"></script>
-    <!-- <script src="../../components/movie-component/movie-component-2.js"></script> -->
   </body>
 </html>

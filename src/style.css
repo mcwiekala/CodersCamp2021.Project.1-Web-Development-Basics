@@ -87,6 +87,7 @@ h6 {
   font-weight: 700;
 }
 
+
 /* COLOR VARIATIONS */
 
 .text-purple {
@@ -171,6 +172,7 @@ h6 {
   .movie {
     height: 400px;
     width: 300px;
+    margin: 10px;
     border-radius: 10px;
     background-image: url(./images/Avengers_Endgame_poster_035_Textless.jpg);
     background-size: 100%;
@@ -208,6 +210,32 @@ h6 {
     font-family: 'Lato', sans-serif;
     font-weight: 100;
     margin: 5px;
+  }
+
+  .movies-section {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .movie-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-wrapper {
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .movie-section-header {
+    margin-bottom: 0.25em;
+    padding-left: .5em;
   }
 
 
@@ -264,3 +292,18 @@ h6 {
   opacity: 1;
   z-index: -1;
 }
+
+/* RESPONSIVE MOVIE COMPONENT */
+@media only screen and (max-width: 1210px) {
+  .movies-section {
+    flex-direction: column;
+    width: 500px;
+  }
+  .header-wrapper {
+    justify-content: center;
+    width: 500px;
+  }
+  .movie-section-header {
+    padding-left: 0;
+  }
+} 

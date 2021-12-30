@@ -11,7 +11,7 @@ class Footer extends HTMLElement {
               </a>
               <a href="https://github.com/mcwiekala/CodersCamp2021.Project.Web-Development-Basics" target="_blank">
                 <img class="footer__logo" src="${githubImage}" alt="github-logo">
-              </a>
+               </a>
           </div>
         </footer>
       `;

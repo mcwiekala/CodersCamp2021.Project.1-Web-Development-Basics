@@ -20,10 +20,10 @@ module.exports = defineConfig({
           'developers-guide',
           'index.html',
         ),
-        collectionDetails: resolve(
+        collectionsList: resolve(
           root,
           'pages',
-          'collection-details',
+          'collections-list',
           'index.html',
         ),
       },

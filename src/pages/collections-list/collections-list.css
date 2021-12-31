@@ -1,0 +1,29 @@
+.collections-list__box {
+  display: flex;
+  padding: 40px;
+  margin: 0 20% 4%;
+}
+
+.purple-section {
+  background-color: var(--purple);
+}
+
+.image {
+  width: 148px;
+}
+
+.collections-list__images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.collections-list__details {
+  margin-left: 30px;
+}
+
+.collections-list__title {
+  font-size: 1.5em;
+  font-weight: bold;
+}

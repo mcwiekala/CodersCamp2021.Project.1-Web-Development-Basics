@@ -7,18 +7,18 @@ class Header extends HTMLElement {
     this.links = [
       {
         name: 'Home',
-        href: 'home.html',
-        active: this.checkPathname('index.html'),
+        href: 'home/',
+        active: this.checkPathname('home'),
       },
       {
         name: 'Films',
-        href: 'films.html',
-        active: this.checkPathname('films.html'),
+        href: 'pages/films/',
+        active: this.checkPathname('films'),
       },
       {
         name: 'Collections',
-        href: 'collections.html',
-        active: this.checkPathname('collections.html'),
+        href: 'pages/collection-details/',
+        active: this.checkPathname('collection-details'),
       },
     ];
   }
@@ -26,10 +26,17 @@ class Header extends HTMLElement {
   // eslint-disable-next-line class-methods-use-this
   checkPathname(path) {
     const pathname = window.location.pathname.split('/');
-    return pathname[1] === path;
+    return pathname[pathname.length - 2] === path;
   }
 
-  /* eslint-disable */
+  // eslint-disable-next-line class-methods-use-this
+  hrefJoin(href) {
+    const primaryHref = 'Web-Development-Basics/';
+    return window.location.href.slice(0, window.location.href.search(primaryHref)
+      + primaryHref.length) + href;
+  }
+
+  /* eslint-disable indent, comma-dangle */
   connectedCallback() {
     this.innerHTML = `
       <header class="header">
@@ -38,11 +45,9 @@ class Header extends HTMLElement {
           <ul class="header__nav-list">
             ${this.links
               .map(
-                (link) =>
-                  `<li class="header__nav-item ${
-                    link.active ? 'header__nav-item--active' : ''
-                  }">
-                    <a class="header__nav-link" href="${link.href}">${link.name}
+                (link) => `<li class="header__nav-item ${
+                    link.active ? 'header__nav-item--active' : ''}">
+                    <a class="header__nav-link" href="${this.hrefJoin(link.href)}">${link.name}
                   </li>`
               )
               .join('')}

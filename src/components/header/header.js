@@ -36,7 +36,7 @@ class Header extends HTMLElement {
       + primaryHref.length) + href;
   }
 
-  /* eslint-disable */
+  /* eslint-disable indent, comma-dangle */
   connectedCallback() {
     this.innerHTML = `
       <header class="header">
@@ -45,10 +45,8 @@ class Header extends HTMLElement {
           <ul class="header__nav-list">
             ${this.links
               .map(
-                (link) =>
-                  `<li class="header__nav-item ${
-                    link.active ? 'header__nav-item--active' : ''
-                  }">
+                (link) => `<li class="header__nav-item ${
+                    link.active ? 'header__nav-item--active' : ''}">
                     <a class="header__nav-link" href="${this.hrefJoin(link.href)}">${link.name}
                   </li>`
               )

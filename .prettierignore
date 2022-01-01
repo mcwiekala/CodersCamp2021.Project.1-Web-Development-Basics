@@ -1,2 +1,4 @@
+# header is a special component shared on multiple pages
 src/components/header/header.js
+# vite configuration
 vite.config.js

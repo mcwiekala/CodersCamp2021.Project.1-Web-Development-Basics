@@ -7,7 +7,7 @@ import Header from './components/header/header';
 import Footer from './components/footer/footer';
 
 const apiKey = '46e8c41c';
-const instance = axios.create({
+const imdbApiClient = axios.create({
   baseURL: 'http://www.omdbapi.com/',
 });
 
@@ -24,10 +24,10 @@ const moviesId = [
   'tt1160419',
 ];
 
-moviesId.forEach(async (movieId) => {
-  const response = await instance.get(`?i=${movieId}&apikey=${apiKey}`);
-  console.log(response.data);
-});
+// moviesId.forEach(async (movieId) => {
+//   const response = await imdbApiClient.get(`?i=${movieId}&apikey=${apiKey}`);
+//   console.log(response.data);
+// });
 
 const romanticWeekendMoviesId = [
   'tt1243957',
@@ -59,33 +59,50 @@ const bestOf2021MoviesId = [
   'tt8430054',
 ];
 
-const c1 = {
-  collectionName: 'Best of 2021',
-  collectionDescription: 'Najlepsze filmy, które trafiły do kin w 2021 roku.',
-  totalLengthInMinutes: 823,
-  movieTitles: ['Film1', 'Film2', 'Film3'],
-  bestOf2021MoviesId: [
-    'tt10370710',
-    'tt0067372',
-    'tt14039582',
-    'tt6817944',
-    'tt8633462',
-    'tt11271038',
-    'tt8430054',
-  ],
-};
+async function checkCollectionLentgh(collection) {
+  let totalLength = 0;
+  /* eslint-disable no-restricted-syntax, no-loop-func, no-await-in-loop */
+  for (const movieId of collection) {
+    const runtimeAsText = await imdbApiClient
+      .get(`?i=${movieId}&apikey=${apiKey}`)
+      .then((response) => response.data.Runtime);
+    const runtime = parseInt(runtimeAsText.split(' ')[0], 10);
+    totalLength += runtime;
+  }
+  /* eslint-enable */
+  console.log(`total: ${totalLength}`);
+  return totalLength;
+}
+checkCollectionLentgh(bestBritishMoviesId);
+checkCollectionLentgh(bestOf2021MoviesId);
+checkCollectionLentgh(romanticWeekendMoviesId);
 
-c1.bestOf2021MoviesId.forEach(async (movieId) => {
-  const {
-    data: { Runtime },
-  } = await instance.get(`?i=${movieId}&apikey=${apiKey}`);
-  console.log (Runtime)
-});
+// const c1 = {
+//   collectionName: 'Best of 2021',
+//   collectionDescription: 'Najlepsze filmy, które trafiły do kin w 2021 roku.',
+//   totalLengthInMinutes: 823,
+//   movieTitles: ['Film1', 'Film2', 'Film3'],
+//   bestOf2021MoviesId: [
+//     'tt10370710',
+//     'tt0067372',
+//     'tt14039582',
+//     'tt6817944',
+//     'tt8633462',
+//     'tt11271038',
+//     'tt8430054',
+//   ],
+// };
 
+// c1.bestOf2021MoviesId.forEach(async (movieId) => {
+//   const {
+//     data: { Runtime },
+//   } = await instance.get(`?i=${movieId}&apikey=${apiKey}`);
+//   console.log(Runtime);
+// });
 
-c1.bestOf2021MoviesId.forEach(async (movieId) => {
-  const {
-    data: { Title },
-  } = await instance.get(`?i=${movieId}&apikey=${apiKey}`);
-  console.log (Title)
-});
+// c1.bestOf2021MoviesId.forEach(async (movieId) => {
+//   const {
+//     data: { Title },
+//   } = await instance.get(`?i=${movieId}&apikey=${apiKey}`);
+//   console.log(Title);
+// });

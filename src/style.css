@@ -4,8 +4,8 @@
   --section-bg-color: #343a40;
   --footer-bg-color: #7a7e83;
   --purple: #7723cb;
-  --text-color-light: #fff;
-  --text-color-dark: #000;
+  --color-light: #fff;
+  --color-dark: #000;
 }
 
 /* BODY */
@@ -24,7 +24,7 @@ body {
   font-family: 'Lato', sans-serif;
   font-size: 18px;
   background-color: var(--main-bg-color);
-  color: var(--text-color-light);
+  color: var(--color-light);
 }
 
 /* HEADERS */
@@ -129,7 +129,7 @@ h6 {
 .btn-primary {
   background-color: var(--purple);
   border: none;
-  color: var(--text-color-light);
+  color: var(--color-light);
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -148,7 +148,7 @@ h6 {
 }
 
 .btn-primary:before {
-  background-color: var(--text-color-light);
+  background-color: var(--color-light);
   border-radius: 1em;
   transition: 0.5s all ease;
   position: absolute;

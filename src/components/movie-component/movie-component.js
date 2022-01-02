@@ -18,7 +18,6 @@ const setComponentData = (title, runtime, year, genre, poster) => {
         </span>
         <h4 class="movie-title">${title}</h4>
         <h5 class="movie-description">${genre} | ${runtime} | ${year}</h5>
-        <button class="add-collection-button">+ MY COLLECTION</button>
       </div>
       <div class="watched-div">
         <img class="watched-button" src="../../images/watched-button.png">
@@ -57,16 +56,10 @@ export default class MovieComponent extends HTMLElement {
     this.shadowRoot
       .querySelector('.watched-button')
       .addEventListener('click', () => this.markWatched());
-    this.shadowRoot
-      .querySelector('.add-collection-button')
-      .addEventListener('click', () => this.addToCollection());
   }
 
   disconnectedCallback() {
     this.shadowRoot.querySelector('.watched-button').removeEventListener();
-    this.shadowRoot
-      .querySelector('.add-collection-button')
-      .removeEventListener();
   }
 }
 

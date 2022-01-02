@@ -5,9 +5,11 @@
   --footer-bg-color: #7a7e83;
   --purple: #7723cb;
   --progress-bar-color: #14d9bf;
+  --text-color-light: #fff;
   --color-light: #fff;
   --color-dark: #000;
-  --movie-opacity-color: rgba(0, 0, 0, 0.7);
+  --movie-opacity-color: #00000091;
+
 }
 
 /* BODY */
@@ -17,9 +19,9 @@
   box-sizing: border-box;
 }
 
-/* FONT WEIGHT GUIDE: 
+/* FONT WEIGHT GUIDE:
   regular - 400
-  bold - 700 
+  bold - 700
   black - 900 */
 
 body {
@@ -98,7 +100,7 @@ h6 {
   color: var(--purple);
 }
 
-/* SECTIONS OF MOVIE COMPONENT */ 
+/* SECTIONS OF MOVIE COMPONENT */
 
 .main-content {
   padding-bottom: 180px;
@@ -132,7 +134,7 @@ h6 {
 
 .watched-button {
  display: flex;
- flex-direction: column; 
+ flex-direction: column;
  padding-top: 15px;
  padding-right: 10px;
 }
@@ -188,7 +190,7 @@ h6 {
     width: 280px;
     border-radius: 0 0 10px 10px;
     background-color: var(--movie-opacity-color);
-    display: flex; 
+    display: flex;
     position: absolute;
     justify-content: space-between;
   }
@@ -202,6 +204,9 @@ h6 {
     color: var(--text-color-light);
     padding-left: 15px;
     padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   .movie-title {
@@ -222,7 +227,7 @@ h6 {
     align-items: center;
     justify-content: space-evenly;
   }
-  
+
   .movie-wrapper {
     display: flex;
     flex-direction: column;
@@ -311,4 +316,4 @@ h6 {
   .movie-section-header {
     padding-left: 0;
   }
-} 
+}

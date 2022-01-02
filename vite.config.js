@@ -36,7 +36,7 @@ module.exports = defineConfig({
           root,
           'pages',
           'movie-details',
-          'index.html'
+          'index.html',
         ),
       },
     },

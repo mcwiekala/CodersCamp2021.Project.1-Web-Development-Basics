@@ -12,6 +12,11 @@ const instance = axios.create({
   baseURL: 'http://www.omdbapi.com/',
 });
 
+const moviesWatched = localStorage.getItem('moviesWatched');
+if (!moviesWatched) {
+  localStorage.setItem('moviesWatched', []);
+}
+
 const moviesId = [
   'tt0816692',
   'tt0103064',

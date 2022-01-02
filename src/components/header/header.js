@@ -7,8 +7,8 @@ class Header extends HTMLElement {
     this.links = [
       {
         name: 'Home',
-        href: 'home/',
-        active: this.checkPathname('home'),
+        href: '',
+        active: this.checkPathname(''),
       },
       {
         name: 'Films',

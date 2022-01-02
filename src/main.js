@@ -59,7 +59,7 @@ const bestOf2021MoviesId = [
   'tt8430054',
 ];
 
-async function checkCollectionLentgh(collection) {
+async function checkCollectionLength(collection) {
   let totalLength = 0;
   /* eslint-disable no-restricted-syntax, no-loop-func, no-await-in-loop */
   for (const movieId of collection) {
@@ -73,36 +73,23 @@ async function checkCollectionLentgh(collection) {
   console.log(`total: ${totalLength}`);
   return totalLength;
 }
-checkCollectionLentgh(bestBritishMoviesId);
-checkCollectionLentgh(bestOf2021MoviesId);
-checkCollectionLentgh(romanticWeekendMoviesId);
+checkCollectionLength(bestBritishMoviesId);
+checkCollectionLength(bestOf2021MoviesId);
+checkCollectionLength(romanticWeekendMoviesId);
 
-// const c1 = {
-//   collectionName: 'Best of 2021',
-//   collectionDescription: 'Najlepsze filmy, które trafiły do kin w 2021 roku.',
-//   totalLengthInMinutes: 823,
-//   movieTitles: ['Film1', 'Film2', 'Film3'],
-//   bestOf2021MoviesId: [
-//     'tt10370710',
-//     'tt0067372',
-//     'tt14039582',
-//     'tt6817944',
-//     'tt8633462',
-//     'tt11271038',
-//     'tt8430054',
-//   ],
-// };
-
-// c1.bestOf2021MoviesId.forEach(async (movieId) => {
-//   const {
-//     data: { Runtime },
-//   } = await instance.get(`?i=${movieId}&apikey=${apiKey}`);
-//   console.log(Runtime);
-// });
-
-// c1.bestOf2021MoviesId.forEach(async (movieId) => {
-//   const {
-//     data: { Title },
-//   } = await instance.get(`?i=${movieId}&apikey=${apiKey}`);
-//   console.log(Title);
-// });
+async function checkMovieTitle(collection) {
+  const movieTitles = [];
+  /* eslint-disable no-restricted-syntax, no-loop-func, no-await-in-loop */
+  for (const movieId of collection) {
+    const movieTitle = await imdbApiClient
+      .get(`?i=${movieId}&apikey=${apiKey}`)
+      .then((response) => response.data.Title);
+    movieTitles.push(movieTitle);
+  }
+  /* eslint-enable */
+  console.log(`${movieTitles}`);
+  return movieTitles;
+}
+checkMovieTitle(bestBritishMoviesId);
+checkMovieTitle(bestOf2021MoviesId);
+checkMovieTitle(romanticWeekendMoviesId);

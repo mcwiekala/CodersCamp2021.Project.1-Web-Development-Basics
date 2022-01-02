@@ -1,6 +1,10 @@
 # Film Book
 
-Projekt do przeglądania filmów oparty o:
+Stwórz swoją własną kolekcję z Filmami! Dzięki FilmBook możesz podzielić się ze swoimi znajomymi filmami które lubisz najbardziej. Twórz kolekcje filmów i monitoruj swój progres!
+
+# API
+
+Projekt oparty o dane filmowe z IMDB:
 
 https://imdb-api.com
 
@@ -11,11 +15,11 @@ Mentor: Michał Ćwiękała
 Uczestnicy:
 
 - Filip Glura
-- Dawid Drzewiński :)
-- Judyta Baca :)
+- Dawid Drzewiński
+- Judyta Baca
 - Aleksandra Radwan
 - Patryk Nowak
-- Sylwia Guzdek :)
+- Sylwia Guzdek
 - Magda Krzak
 
 # Jak zacząć?

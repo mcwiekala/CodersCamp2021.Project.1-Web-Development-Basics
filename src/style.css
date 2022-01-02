@@ -23,6 +23,9 @@
   black - 900 */
 
 body {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 120px;
   font-family: 'Lato', sans-serif;
   font-size: 18px;
   background-color: var(--main-bg-color);
@@ -98,6 +101,7 @@ h6 {
 /* SECTIONS OF MOVIE COMPONENT */ 
 
 .main-content {
+  padding-bottom: 180px;
   margin: 0 10%;
   display: flex;
   flex-direction: column;
@@ -124,7 +128,6 @@ h6 {
 
 .footer {
   background-color: var(--footer-bg-color);
-  padding: 25px;
 }
 
 .watched-button {

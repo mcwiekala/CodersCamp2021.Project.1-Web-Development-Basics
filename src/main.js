@@ -24,10 +24,10 @@ const moviesId = [
   'tt1160419',
 ];
 
-// moviesId.forEach(async (movieId) => {
-//   const response = await imdbApiClient.get(`?i=${movieId}&apikey=${apiKey}`);
-//   console.log(response.data);
-// });
+moviesId.forEach(async (movieId) => {
+  const response = await imdbApiClient.get(`?i=${movieId}&apikey=${apiKey}`);
+  console.log(response.data);
+});
 
 const romanticWeekendMoviesId = [
   'tt1243957',

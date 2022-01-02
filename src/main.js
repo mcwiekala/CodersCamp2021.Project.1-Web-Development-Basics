@@ -3,6 +3,7 @@ import axios from 'axios';
 import sheet from './style.css';
 import './components/header/header.css';
 import './components/footer/footer.css';
+
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 
@@ -15,13 +16,13 @@ const moviesId = [
   'tt0816692',
   'tt0103064',
   'tt1675434',
-  'tt0910970',
-  'tt4633694',
-  'tt1675434',
-  'tt0078748',
-  'tt1446714',
-  'tt3896198',
-  'tt1160419',
+  // 'tt0910970',
+  // 'tt4633694',
+  // 'tt1675434',
+  // 'tt0078748',
+  // 'tt1446714',
+  // 'tt3896198',
+  // 'tt1160419',
 ];
 
 moviesId.forEach(async (movieId) => {

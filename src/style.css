@@ -7,6 +7,7 @@
   --progress-bar-color: #14d9bf;
   --color-light: #fff;
   --color-dark: #000;
+  --movie-opacity-color: #00000091;
 }
 
 /* BODY */
@@ -198,6 +199,9 @@ h6 {
     color: var(--text-color-light);
     padding-left: 15px;
     padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   .movie-title {

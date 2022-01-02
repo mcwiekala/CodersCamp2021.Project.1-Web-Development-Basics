@@ -23,7 +23,7 @@ template.innerHTML = `
       </div>
     </div>
 </div>
-`
+`;
 
 class MovieComponent extends HTMLElement {
   constructor() {
@@ -44,6 +44,7 @@ class MovieComponent extends HTMLElement {
 
   addToCollection() {
     const addCollectionBut = this.shadowRoot.querySelector(
+      // eslint-disable-next-line comma-dangle
       '.add-collection-button'
     );
     addCollectionBut.classList.toggle('added-movie');

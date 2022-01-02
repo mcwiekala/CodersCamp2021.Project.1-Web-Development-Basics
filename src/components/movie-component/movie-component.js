@@ -36,12 +36,9 @@ export default class MovieComponent extends HTMLElement {
     setComponentData(id, title, runtime, year, genre, poster);
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
-    // localStorage.setItem(id, runtime);
 
     let moviesWatched = [];
-    console.log(localStorage.moviesWatched);
     if (localStorage.moviesWatched) {
-      console.log(`zawiera: ${localStorage.moviesWatched}`);
       moviesWatched = JSON.parse(localStorage.moviesWatched);
     }
     if (!moviesWatched.includes(id)) {

@@ -1,11 +1,11 @@
 const template = document.createElement('template');
-const setComponentData = (id, title, runtime, year, genre, poster) => {
+const setComponentData = (title, runtime, year, genre, poster) => {
   template.innerHTML = `
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
       @import "../../style.css"
   </style>
-  <div id="${id}" class="movie">
+  <div class="movie">
     <img class="movie-image" src="${poster}"/>
     <div class="opacity">
       <div class="info">
@@ -33,7 +33,7 @@ export default class MovieComponent extends HTMLElement {
     this.watched = false;
     this.id = id;
     this.runtime = runtime;
-    setComponentData(id, title, runtime, year, genre, poster);
+    setComponentData(title, runtime, year, genre, poster);
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
   }

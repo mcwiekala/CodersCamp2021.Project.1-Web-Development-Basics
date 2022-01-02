@@ -7,6 +7,7 @@
   --progress-bar-color: #14d9bf;
   --color-light: #fff;
   --color-dark: #000;
+  --movie-opacity-color: rgba(0, 0, 0, 0.7);
 }
 
 /* BODY */
@@ -172,23 +173,26 @@ h6 {
   .movie {
     height: 400px;
     width: 300px;
-    margin: 10px;
+    margin: 30px;
     border-radius: 10px;
-    background-image: url(./images/Avengers_Endgame_poster_035_Textless.jpg);
     background-size: 100%;
     display: flex;
     align-items:flex-end
   }
 
   .opacity {
-    height: 135px;
-    width: 300px;
-    margin-bottom: 20px;
-    border-bottom-right-radius:  10px;
-    border-bottom-left-radius: 10px;
+    height: 150px;
+    width: 280px;
+    border-radius: 0 0 10px 10px;
     background-color: var(--movie-opacity-color);
     display: flex; 
+    position: absolute;
     justify-content: space-between;
+  }
+
+  .movie-image {
+    width: 280px;
+    border-radius: 0 0 10px 10px;
   }
 
   .info {

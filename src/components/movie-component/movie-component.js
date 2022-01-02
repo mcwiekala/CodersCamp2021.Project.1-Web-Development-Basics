@@ -1,10 +1,12 @@
 const template = document.createElement('template');
-template.innerHTML = `
+const setComponentData = (title, runtime, year, genre, poster) => {
+  template.innerHTML = `
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
       @import "../../style.css"
   </style>
   <div class="movie">
+    <img class="movie-image" src="${poster}"/>
     <div class="opacity">
       <div class="info">
         <span class="rating-stars">
@@ -14,21 +16,23 @@ template.innerHTML = `
           </span>
           <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>
         </span>
-        <h4 class="movie-title">AVENGERS: End Game</h4>
-        <h5 class="movie-description">Action | 120min | 2021</h5>
+        <h4 class="movie-title">${title}</h4>
+        <h5 class="movie-description">${genre} | ${runtime} | ${year}</h5>
         <button class="add-collection-button">+ MY COLLECTION</button>
       </div>
       <div class="watched-div">
         <img class="watched-button" src="../../images/watched-button.png">
       </div>
     </div>
-</div>
+  </div>
 `
+}
 
-class MovieComponent extends HTMLElement {
-  constructor() {
+export default class MovieComponent extends HTMLElement {
+  constructor(title, runtime, year, genre, poster) {
     super();
 
+    setComponentData(title, runtime, year, genre, poster)
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
   }

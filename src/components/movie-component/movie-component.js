@@ -36,21 +36,12 @@ export default class MovieComponent extends HTMLElement {
     setComponentData(id, title, runtime, year, genre, poster);
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
-
-    let moviesWatched = [];
-    if (localStorage.moviesWatched) {
-      moviesWatched = JSON.parse(localStorage.moviesWatched);
-    }
-    if (!moviesWatched.includes(id)) {
-      moviesWatched.push(id);
-    }
-    localStorage.moviesWatched = JSON.stringify(moviesWatched);
   }
 
-  toggleWatched(element) {
+  toggleWatched() {
     this.watched = !this.watched;
     const watchedTick = this.shadowRoot.querySelector('.watched-button');
-    this.checkId(element);
+    this.toggleLocalStorage();
     if (this.watched) {
       watchedTick.setAttribute('src', '../../images/watched-button-green.png');
     } else {
@@ -59,9 +50,19 @@ export default class MovieComponent extends HTMLElement {
   }
 
   // eslint-disable-next-line class-methods-use-this
-  checkId() {
-    console.log(this.id);
-    // alert(this.id);
+  toggleLocalStorage() {
+    let moviesWatched = [];
+    if (localStorage.moviesWatched) {
+      moviesWatched = JSON.parse(localStorage.moviesWatched);
+    }
+    if (!moviesWatched.includes(this.id)) {
+      console.log(`add: ${this.id}`);
+      moviesWatched.push(this.id);
+    } else {
+      console.log(`remove: ${this.id}`);
+      moviesWatched = moviesWatched.filter((f) => f !== this.id);
+    }
+    localStorage.moviesWatched = JSON.stringify(moviesWatched);
   }
 
   addToCollection() {

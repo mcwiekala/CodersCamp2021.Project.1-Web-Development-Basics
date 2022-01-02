@@ -25,14 +25,14 @@ const setComponentData = (title, runtime, year, genre, poster) => {
       </div>
     </div>
   </div>
-`
-}
+`;
+};
 
 export default class MovieComponent extends HTMLElement {
   constructor(title, runtime, year, genre, poster) {
     super();
 
-    setComponentData(title, runtime, year, genre, poster)
+    setComponentData(title, runtime, year, genre, poster);
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
   }
@@ -48,7 +48,7 @@ export default class MovieComponent extends HTMLElement {
 
   addToCollection() {
     const addCollectionBut = this.shadowRoot.querySelector(
-      '.add-collection-button'
+      '.add-collection-button',
     );
     addCollectionBut.classList.toggle('added-movie');
   }

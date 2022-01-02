@@ -32,6 +32,12 @@ module.exports = defineConfig({
           'films',
           'index.html',
         ),
+        movieDetails: resolve(
+          root,
+          'pages',
+          'movie-details',
+          'index.html',
+        ),
       },
     },
   },

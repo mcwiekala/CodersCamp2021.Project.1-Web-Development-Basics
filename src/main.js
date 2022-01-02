@@ -24,10 +24,10 @@ const moviesId = [
   'tt1160419',
 ];
 
-// moviesId.forEach(async (movieId) => {
-//   const response = await imdbApiClient.get(`?i=${movieId}&apikey=${apiKey}`);
-//   console.log(response.data);
-// });
+moviesId.forEach(async (movieId) => {
+  const response = await imdbApiClient.get(`?i=${movieId}&apikey=${apiKey}`);
+  console.log(response.data);
+});
 
 const romanticWeekendMoviesId = [
   'tt1243957',
@@ -93,3 +93,59 @@ async function checkMovieTitle(collection) {
 checkMovieTitle(bestBritishMoviesId);
 checkMovieTitle(bestOf2021MoviesId);
 checkMovieTitle(romanticWeekendMoviesId);
+
+const bestOf2021MoviesCollection = {
+  collectionName: 'Best of 2021',
+  collectionDescription: 'Best movies of 2021',
+  movieids: [
+    'tt10370710',
+    'tt0067372',
+    'tt14039582',
+    'tt6817944',
+    'tt8633462',
+    'tt11271038',
+    'tt8430054',
+  ],
+  collectionImage: `src\images\best_of_2021_collection.jpg`,
+  totalLengthInMinutes: checkCollectionLength(bestOf2021MoviesId),
+  movieTitles: checkMovieTitle(bestOf2021MoviesId),
+};
+
+console.log(bestOf2021MoviesCollection);
+
+const bestBritishMoviesCollection = {
+  collectionName: 'Best British Movies',
+  collectionDescription: 'Best british movies',
+  movieids: [
+    'tt0116209',
+    'tt0117951',
+    'tt0127536',
+    'tt0109831',
+    'tt0085859',
+    'tt0082158',
+    'tt0119164',
+  ],
+  collectionImage: `src\images\best_british_collection.jpg`,
+  totalLengthInMinutes: checkCollectionLength(bestBritishMoviesId),
+  movieTitles: checkMovieTitle(bestBritishMoviesId),
+};
+
+console.log(bestBritishMoviesCollection);
+
+const romanticWeekendMoviesCollection = {
+  collectionName: 'Romantic Weekend',
+  collectionDescription: 'Movies for romantic weekend',
+  movieids: [
+    'tt1243957',
+    'tt0120338',
+    'tt11867884',
+    'tt2452244',
+    'tt7453044',
+    'tt2151010',
+    'tt0376541',
+  ],
+  collectionImage: `src\images\romantic_weekend_collection.jpg`,
+  totalLengthInMinutes: checkCollectionLength(romanticWeekendMoviesId),
+  movieTitles: checkMovieTitle(romanticWeekendMoviesId),
+};
+console.log(romanticWeekendMoviesCollection);

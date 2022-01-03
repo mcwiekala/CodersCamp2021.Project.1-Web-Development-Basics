@@ -36,6 +36,18 @@ export default class MovieComponent extends HTMLElement {
     setComponentData(title, runtime, year, genre, poster);
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.init();
+  }
+
+  init() {
+    let moviesWatched = [];
+    if (localStorage.moviesWatched) {
+      moviesWatched = JSON.parse(localStorage.moviesWatched);
+    }
+    if (moviesWatched.includes(this.id)) {
+      this.toggleWatched();
+    }
+    localStorage.moviesWatched = JSON.stringify(moviesWatched);
   }
 
   toggleWatched() {

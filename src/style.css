@@ -302,6 +302,52 @@ h6 {
   z-index: -1;
 }
 
+/* COLLECTION COMPONENT */
+
+.collection-section {
+  width: 900px;
+  background-color: var(--purple);
+  display: flex;
+  margin-bottom: 2em;
+}
+
+.collection-section img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.collection-section .collection-details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2em;
+}
+
+.collection-section .collection-details .collection-title {
+  display: block;
+  font-size: 2.5em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 900;
+}
+
+.collection-section .collection-details .collection-description {
+  display: block;
+  font-size: 1.5em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 500;
+  margin-top: 1em;
+}
+
+.collection-section .collection-details a {
+  color: unset;
+  text-decoration: none;
+}
+
+
+
+
 /* RESPONSIVE MOVIE COMPONENT */
 @media only screen and (max-width: 1210px) {
   .movies-section {
@@ -316,3 +362,18 @@ h6 {
     padding-left: 0;
   }
 }
+
+@media only screen and (max-width: 850px) {
+  .collection-section {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  .collection-section .collection-details {
+    align-items: center;
+    margin: 0;
+    margin-top: 1em;
+  }
+}
+

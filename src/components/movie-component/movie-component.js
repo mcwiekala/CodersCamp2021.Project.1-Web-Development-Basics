@@ -1,9 +1,13 @@
+import watchedButtonGreen from '../../images/watched-button-green.png';
+import watchedButton from '../../images/watched-button.png';
+import sheet from '../../style.css';
+
 const template = document.createElement('template');
 const setComponentData = (title, runtime, year, genre, poster) => {
   template.innerHTML = `
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
-      @import "../../style.css"
+      @import "${sheet}"
   </style>
   <div class="movie">
     <img class="movie-image" src="${poster}"/>
@@ -20,7 +24,7 @@ const setComponentData = (title, runtime, year, genre, poster) => {
         <h5 class="movie-description">${genre} | ${runtime} | ${year}</h5>
       </div>
       <div class="watched-div">
-        <img class="watched-button" src="../../images/watched-button.png">
+        <img class="watched-button" src="${watchedButton}">
       </div>
     </div>
   </div>
@@ -55,9 +59,9 @@ export default class MovieComponent extends HTMLElement {
     const watchedTick = this.shadowRoot.querySelector('.watched-button');
     this.toggleLocalStorage();
     if (this.watched) {
-      watchedTick.setAttribute('src', '../../images/watched-button-green.png');
+      watchedTick.setAttribute('src', watchedButtonGreen);
     } else {
-      watchedTick.setAttribute('src', '../../images/watched-button.png');
+      watchedTick.setAttribute('src', watchedButton);
     }
   }
 

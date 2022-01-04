@@ -62,7 +62,7 @@ export default class MovieComponent extends HTMLElement {
       .querySelector('.movie')
       .addEventListener('click', () => {
         window.location.href = `${window.location.origin}/CodersCamp2021.Project.Web-Development-Basics/pages/movie-details/`; 
-        localStorage.setItem('movieId', this.id)
+        sessionStorage.setItem('movieId', this.id)
       }); 
   }
 

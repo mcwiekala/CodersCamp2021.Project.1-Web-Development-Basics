@@ -11,7 +11,7 @@ const instance = axios.create({
 
 const {
     data: { Title, Runtime, Year, Genre, Poster, Plot, Ratings },
-  } = await instance.get(`?i=${localStorage.movieId}&apikey=${apiKey}`);
+  } = await instance.get(`?i=${sessionStorage.movieId}&apikey=${apiKey}`);
 
 console.log(Title, Runtime, Year, Genre)
 

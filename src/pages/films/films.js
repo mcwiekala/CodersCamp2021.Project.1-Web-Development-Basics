@@ -1,9 +1,12 @@
+/* eslint-disable comma-dangle */
+/* eslint-disable object-curly-newline */
 /* eslint-disable no-unused-vars */
 import axios from 'axios';
+import sheet from '../../style.css';
+
 import MovieComponent from '../../components/movie-component/movie-component';
 import '../../components/header/header.css';
 import '../../components/footer/footer.css';
-import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 
 const moviesSection = document.querySelector('.movies-section');

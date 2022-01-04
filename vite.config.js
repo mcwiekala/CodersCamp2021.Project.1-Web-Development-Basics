@@ -38,6 +38,12 @@ module.exports = defineConfig({
           'movie-details',
           'index.html',
         ),
+        collections: resolve(
+          root,
+          'pages',
+          'collections',
+          'index.html',
+        ),
       },
     },
   },

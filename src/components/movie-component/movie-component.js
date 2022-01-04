@@ -95,7 +95,7 @@ export default class MovieComponent extends HTMLElement {
       .addEventListener('click', () => this.markWatched());
 
     this.shadowRoot
-      .querySelector('.movie')
+      .querySelector('.movie-title')
       .addEventListener('click', () => {
         window.location.href = `${window.location.origin}/CodersCamp2021.Project.Web-Development-Basics/pages/movie-details/`;
         sessionStorage.setItem('movieId', this.id)

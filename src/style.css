@@ -182,7 +182,6 @@ h6 {
     background-size: 100%;
     display: flex;
     align-items:flex-end;
-    cursor: pointer;
   }
 
   .opacity {
@@ -198,6 +197,7 @@ h6 {
   .movie-image {
     width: 280px;
     border-radius: 0 0 10px 10px;
+    
   }
 
   .info {
@@ -212,6 +212,7 @@ h6 {
   .movie-title {
     font-family: 'Lato', sans-serif;
     margin: 5px;
+    cursor: pointer;
   }
 
   .movie-description {

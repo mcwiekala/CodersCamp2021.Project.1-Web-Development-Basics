@@ -6,6 +6,7 @@ import './components/footer/footer.css';
 
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
+import { setBest2021, setBestBritish, setBestRomantic } from './components/collection-component/load-data';
 
 const best2021 = 'LS_BEST_2021';
 const bestBritish = 'LS_BEST_BRIT';
@@ -107,9 +108,9 @@ async function romanticWeekendMoviesCollection() {
     localStorage.removeItem(bestRomantic);
   }
   localStorage.setItem(bestRomantic, JSON.stringify(romanticWeekendCollection));
+  setBestRomantic()
   return romanticWeekendCollection;
 }
-
 setTimeout(romanticWeekendMoviesCollection, 0);
 
 async function bestBritishMoviesCollection() {
@@ -134,6 +135,7 @@ async function bestBritishMoviesCollection() {
     localStorage.removeItem(bestBritish);
   }
   localStorage.setItem(bestBritish, JSON.stringify(bestBritishCollection));
+  setBestBritish();
   return bestBritishCollection;
 }
 
@@ -161,6 +163,7 @@ async function bestOf2021MoviesCollection() {
     localStorage.removeItem(best2021);
   }
   localStorage.setItem(best2021, JSON.stringify(bestOf2021Collection));
+  setBest2021();
   return bestOf2021Collection;
 }
 

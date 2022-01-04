@@ -26,6 +26,23 @@ class CollectionComponent extends HTMLElement {
     this.shadowRoot.querySelector('#link1').href = this.getAttribute('collection-link')
     this.shadowRoot.querySelector('#link2').href = this.getAttribute('collection-link')
   }
+
+  static get observedAttributes() {
+    return ['collection-name', 'collection-text', 'img-source', 'collection-link'];
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (name === 'collection-name') {
+      this.shadowRoot.querySelector('.collection-title').innerHTML = newValue
+    } else if (name === 'collection-text') {
+      this.shadowRoot.querySelector('.collection-description').innerHTML = newValue
+    } else if (name === 'img-source') {
+      this.shadowRoot.querySelector('.collection-poster').src = newValue
+    } else if (name === 'collection-link') {
+      this.shadowRoot.querySelector('#link1').href = newValue
+      this.shadowRoot.querySelector('#link2').href = newValue
+    }
+  }
 }
 
 window.customElements.define('collection-component', CollectionComponent)

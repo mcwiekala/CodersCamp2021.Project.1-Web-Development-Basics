@@ -1,5 +1,9 @@
+/* eslint-disable comma-dangle */
+/* eslint-disable object-curly-newline */
 /* eslint-disable no-unused-vars */
 import axios from 'axios';
+import sheet from '../../style.css';
+
 import MovieComponent from '../../components/movie-component/movie-component';
 import '../../components/header/header.css';
 import '../../components/footer/footer.css';
@@ -30,6 +34,6 @@ moviesId.forEach(async (movieId) => {
     data: { Title, Runtime, Year, Genre, Poster },
   } = await instance.get(`?i=${movieId}&apikey=${apiKey}`);
   moviesSection.appendChild(
-    new MovieComponent(Title, Runtime, Year, Genre.split(',')[0], Poster)
+    new MovieComponent(movieId, Title, Runtime, Year, Genre, Poster)
   );
 });

@@ -12,6 +12,10 @@ const imdbApiClient = axios.create({
   baseURL: 'http://www.omdbapi.com/',
 });
 
+if (!localStorage.moviesWatched) {
+  localStorage.moviesWatched = [];
+}
+
 const moviesId = [
   'tt0816692',
   'tt0103064',

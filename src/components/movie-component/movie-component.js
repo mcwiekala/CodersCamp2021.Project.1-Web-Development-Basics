@@ -32,7 +32,7 @@ const setComponentData = (title, runtime, year, genre, poster) => {
 };
 
 export default class MovieComponent extends HTMLElement {
-  constructor(title, runtime, year, genre, poster) {
+  constructor(id, title, runtime, year, genre, poster) {
     super();
     this.watched = false;
     this.id = id;

@@ -30,6 +30,6 @@ moviesId.forEach(async (movieId) => {
     data: { Title, Runtime, Year, Genre, Poster, imdbID },
   } = await instance.get(`?i=${movieId}&apikey=${apiKey}`);
   moviesSection.appendChild(
-    new MovieComponent(Title, Runtime, Year, Genre.split(',')[0], Poster, imdbID)
+    new MovieComponent(movieId, Title, Runtime, Year, Genre, Poster)
   );
 });

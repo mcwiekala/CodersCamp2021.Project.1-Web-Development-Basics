@@ -17,8 +17,8 @@ class Header extends HTMLElement {
       },
       {
         name: 'Collections',
-        href: 'pages/collection-details/',
-        active: this.checkPathname('collection-details'),
+        href: 'pages/collections/',
+        active: this.checkPathname('collections'),
       },
     ];
   }

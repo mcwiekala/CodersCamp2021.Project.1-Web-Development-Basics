@@ -92,7 +92,7 @@ export default class MovieComponent extends HTMLElement {
   connectedCallback() {
     this.shadowRoot
       .querySelector('.watched-button')
-      .addEventListener('click', () => this.markWatched());
+      .addEventListener('click', () => this.toggleWatched(this));
 
     this.shadowRoot
       .querySelector('.movie-title')

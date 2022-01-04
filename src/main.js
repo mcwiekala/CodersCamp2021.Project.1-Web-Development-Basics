@@ -20,24 +20,6 @@ if (!localStorage.moviesWatched) {
   localStorage.moviesWatched = [];
 }
 
-const moviesId = [
-  'tt0816692',
-  'tt0103064',
-  'tt1675434',
-  // 'tt0910970',
-  // 'tt4633694',
-  // 'tt1675434',
-  // 'tt0078748',
-  // 'tt1446714',
-  // 'tt3896198',
-  // 'tt1160419',
-];
-
-moviesId.forEach(async (movieId) => {
-  const response = await imdbApiClient.get(`?i=${movieId}&apikey=${apiKey}`);
-  console.log(response.data);
-});
-
 const romanticWeekendMoviesId = [
   'tt1243957',
   'tt0120338',

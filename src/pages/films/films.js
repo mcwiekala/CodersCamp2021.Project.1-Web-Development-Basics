@@ -31,7 +31,7 @@ const moviesId = [
 
 moviesId.forEach(async (movieId) => {
   const {
-    data: { Title, Runtime, Year, Genre, Poster },
+    data: { Title, Runtime, Year, Genre, Poster, imdbID },
   } = await instance.get(`?i=${movieId}&apikey=${apiKey}`);
   moviesSection.appendChild(
     new MovieComponent(movieId, Title, Runtime, Year, Genre, Poster)

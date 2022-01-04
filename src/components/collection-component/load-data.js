@@ -6,19 +6,19 @@ const collection3 = document.querySelector('#collection-3')
 const bestOf2021MoviesCollection = {
     collectionName: 'Best of 2021',
     collectionDescription: 'Best movies of 2021',
-    collectionImage: `src/images/best_of_2021_collection.jpg`,
+    collectionImage: '../../images/Avengers_Endgame_poster_035_Textless.jpg',
   };
   
   const bestBritishMoviesCollection = {
     collectionName: 'Best British Movies',
     collectionDescription: 'Best british movies',
-    collectionImage: `src/images/best_british_collection.jpg`,
+    collectionImage: '../../images/Avengers_Endgame_poster_035_Textless.jpg',
   };
   
   const romanticWeekendMoviesCollection = {
     collectionName: 'Romantic Weekend',
     collectionDescription: 'Movies for romantic weekend',
-    collectionImage: `src/images/romantic_weekend_collection.jpg`,
+    collectionImage: '../../images/Avengers_Endgame_poster_035_Textless.jpg',
   };
 
 

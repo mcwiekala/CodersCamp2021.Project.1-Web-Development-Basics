@@ -1,13 +1,13 @@
 const template = document.createElement('template')
 template.innerHTML = `
 <style>
-      @import "../../style.css"
+      @import "./collections.css"
   </style>
-  <div class="section collection-section">
-    <a id="link1" href="../../pages/collection-details/index.html"><img class="collection-poster" src="../../images/Avengers_Endgame_poster_035_Textless.jpg" /></a>
-    <div class="collection-details">
-        <a id="link2" href="../../pages/collection-details/index.html"><h1 class="collection-title">SOME TITLE</h1></a>
-        <h1 class="collection-description">Whatever description for collection</h1>
+  <div class="collection__section">
+    <img class="collection__poster" src="../../images/Avengers_Endgame_poster_035_Textless.jpg" />
+    <div class="collection__details">
+        <a id="link" href="../../pages/collection-details/index.html"><h1 class="collection__title">SOME TITLE</h1></a>
+        <h1 class="collection__description">Whatever description for collection</h1>
     </div>
   </div>
 `
@@ -20,11 +20,10 @@ class CollectionComponent extends HTMLElement {
     this.attachShadow({mode: "open"})
     this.shadowRoot.appendChild(template.content.cloneNode(true))
 
-    this.shadowRoot.querySelector('.collection-title').innerHTML = this.getAttribute('collection-name')
-    this.shadowRoot.querySelector('.collection-description').innerHTML = this.getAttribute('collection-text')
-    this.shadowRoot.querySelector('.collection-poster').src = this.getAttribute('img-source')
-    this.shadowRoot.querySelector('#link1').href = this.getAttribute('collection-link')
-    this.shadowRoot.querySelector('#link2').href = this.getAttribute('collection-link')
+    this.shadowRoot.querySelector('.collection__title').innerHTML = this.getAttribute('collection-name')
+    this.shadowRoot.querySelector('.collection__description').innerHTML = this.getAttribute('collection-text')
+    this.shadowRoot.querySelector('.collection__poster').src = this.getAttribute('img-source')
+    this.shadowRoot.querySelector('#link').href = this.getAttribute('collection-link')
   }
 
   static get observedAttributes() {
@@ -33,14 +32,13 @@ class CollectionComponent extends HTMLElement {
 
   attributeChangedCallback(name, oldValue, newValue) {
     if (name === 'collection-name') {
-      this.shadowRoot.querySelector('.collection-title').innerHTML = newValue
+      this.shadowRoot.querySelector('.collection__title').innerHTML = newValue
     } else if (name === 'collection-text') {
-      this.shadowRoot.querySelector('.collection-description').innerHTML = newValue
+      this.shadowRoot.querySelector('.collection__description').innerHTML = newValue
     } else if (name === 'img-source') {
-      this.shadowRoot.querySelector('.collection-poster').src = newValue
+      this.shadowRoot.querySelector('.collection__poster').src = newValue
     } else if (name === 'collection-link') {
-      this.shadowRoot.querySelector('#link1').href = newValue
-      this.shadowRoot.querySelector('#link2').href = newValue
+      this.shadowRoot.querySelector('#link').href = newValue
     }
   }
 }

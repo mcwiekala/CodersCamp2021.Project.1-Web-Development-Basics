@@ -45,6 +45,10 @@
   margin-bottom: 16px;
 }
 
+.movie-detail__item > h3 {
+  margin: 0;
+}
+
 .movie-detail__title {
   margin: 0 16px 0 0;
 }
@@ -54,4 +58,9 @@
   grid-row: 1;
   background-color: var(--purple);
   border-radius: 16px;
+}
+
+.movie-detail__description {
+  margin-top: 30px;
+  width: 70%;
 }

@@ -14,22 +14,22 @@ const instance = axios.create({
 
 const moviesId = [
   'tt0816692',
-  'tt0103064',
-  'tt1675434',
-  'tt0910970',
-  'tt4633694',
-  'tt0133093',
-  'tt0078748',
-  'tt1446714',
-  'tt3896198',
-  'tt1160419',
+  // 'tt0103064',
+  // 'tt1675434',
+  // 'tt0910970',
+  // 'tt4633694',
+  // 'tt0133093',
+  // 'tt0078748',
+  // 'tt1446714',
+  // 'tt3896198',
+  // 'tt1160419',
 ];
 
 moviesId.forEach(async (movieId) => {
   const {
-    data: { Title, Runtime, Year, Genre, Poster },
+    data: { Title, Runtime, Year, Genre, Poster, imdbID },
   } = await instance.get(`?i=${movieId}&apikey=${apiKey}`);
   moviesSection.appendChild(
-    new MovieComponent(Title, Runtime, Year, Genre.split(',')[0], Poster)
+    new MovieComponent(Title, Runtime, Year, Genre.split(',')[0], Poster, imdbID)
   );
 });

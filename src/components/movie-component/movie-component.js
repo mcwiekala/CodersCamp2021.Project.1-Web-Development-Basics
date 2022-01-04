@@ -28,9 +28,10 @@ const setComponentData = (title, runtime, year, genre, poster) => {
 };
 
 export default class MovieComponent extends HTMLElement {
-  constructor(title, runtime, year, genre, poster) {
+  constructor(title, runtime, year, genre, poster, id) {
     super();
 
+    this.id = id;
     setComponentData(title, runtime, year, genre, poster);
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
@@ -56,11 +57,20 @@ export default class MovieComponent extends HTMLElement {
     this.shadowRoot
       .querySelector('.watched-button')
       .addEventListener('click', () => this.markWatched());
+
+    this.shadowRoot
+      .querySelector('.movie')
+      .addEventListener('click', () => {
+        window.location.href = `${window.location.origin}/CodersCamp2021.Project.Web-Development-Basics/pages/movie-details/`; 
+        localStorage.setItem('movieId', this.id)
+      }); 
   }
 
   disconnectedCallback() {
     this.shadowRoot.querySelector('.watched-button').removeEventListener();
+    this.shadowRoot.querySelector('.movie').removeEventListener();
   }
+
 }
 
 window.customElements.define('movie-component', MovieComponent);

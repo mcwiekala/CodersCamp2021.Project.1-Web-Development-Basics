@@ -20,24 +20,6 @@ if (!localStorage.moviesWatched) {
   localStorage.moviesWatched = [];
 }
 
-const moviesId = [
-  'tt0816692',
-  'tt0103064',
-  'tt1675434',
-  // 'tt0910970',
-  // 'tt4633694',
-  // 'tt1675434',
-  // 'tt0078748',
-  // 'tt1446714',
-  // 'tt3896198',
-  // 'tt1160419',
-];
-
-moviesId.forEach(async (movieId) => {
-  const response = await imdbApiClient.get(`?i=${movieId}&apikey=${apiKey}`);
-  console.log(response.data);
-});
-
 const romanticWeekendMoviesId = [
   'tt1243957',
   'tt0120338',
@@ -121,7 +103,9 @@ async function romanticWeekendMoviesCollection() {
     totalLengthInMinutes: await checkCollectionLength(romanticWeekendMoviesId),
     movieTitles: await checkMovieTitle(romanticWeekendMoviesId),
   };
-  console.log(romanticWeekendCollection);
+  if (localStorage.getItem(bestRomantic)) {
+    localStorage.removeItem(bestRomantic);
+  }
   localStorage.setItem(bestRomantic, JSON.stringify(romanticWeekendCollection));
   return romanticWeekendCollection;
 }
@@ -146,7 +130,9 @@ async function bestBritishMoviesCollection() {
     totalLengthInMinutes: await checkCollectionLength(bestBritishMoviesId),
     movieTitles: await checkMovieTitle(bestBritishMoviesId),
   };
-  console.log(bestBritishCollection);
+  if (localStorage.getItem(bestBritish)) {
+    localStorage.removeItem(bestBritish);
+  }
   localStorage.setItem(bestBritish, JSON.stringify(bestBritishCollection));
   return bestBritishCollection;
 }
@@ -171,7 +157,9 @@ async function bestOf2021MoviesCollection() {
     totalLengthInMinutes: await checkCollectionLength(bestOf2021MoviesId),
     movieTitles: await checkMovieTitle(bestOf2021MoviesId),
   };
-  console.log(bestOf2021Collection);
+  if (localStorage.getItem(best2021)) {
+    localStorage.removeItem(best2021);
+  }
   localStorage.setItem(best2021, JSON.stringify(bestOf2021Collection));
   return bestOf2021Collection;
 }

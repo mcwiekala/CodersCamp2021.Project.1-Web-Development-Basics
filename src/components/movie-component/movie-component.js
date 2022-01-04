@@ -93,10 +93,18 @@ export default class MovieComponent extends HTMLElement {
     this.shadowRoot
       .querySelector('.watched-button')
       .addEventListener('click', () => this.toggleWatched(this));
+
+    this.shadowRoot
+      .querySelector('.movie-title')
+      .addEventListener('click', () => {
+        window.location.href = `${window.location.origin}/CodersCamp2021.Project.Web-Development-Basics/pages/movie-details/`;
+        sessionStorage.setItem('movieId', this.id)
+      });
   }
 
   disconnectedCallback() {
     this.shadowRoot.querySelector('.watched-button').removeEventListener();
+    this.shadowRoot.querySelector('.movie').removeEventListener();
   }
 }
 

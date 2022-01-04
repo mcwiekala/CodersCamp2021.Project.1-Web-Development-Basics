@@ -15,7 +15,7 @@
 .movie-detail__image {
   grid-column: 1;
   grid-row: 1/2;
-  margin: 64px 0 0 64px;
+  margin: 64px 0 0 80px;
 }
 
 .movie-detail__header {
@@ -36,13 +36,18 @@
 
 .movie-detail__list {
   list-style: none;
-  padding-left: 0;
 }
 
 .movie-detail__item {
-  display: flex;
-  align-items: flex-end;
   margin-bottom: 16px;
+}
+
+.movie-detail__item > h3 {
+  margin: 0;
+}
+
+.movie-detail__item > p {
+  margin-top: 2px;
 }
 
 .movie-detail__title {
@@ -54,4 +59,9 @@
   grid-row: 1;
   background-color: var(--purple);
   border-radius: 16px;
+}
+
+.movie-detail__description {
+  margin-top: 30px;
+  width: 70%;
 }

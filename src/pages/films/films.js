@@ -43,7 +43,7 @@ const movies = [];
 moviesId.forEach(async (movieId) => {
   const {
     data,
-    data: { Title, Runtime, Year, Genre, Poster },
+    data: { Title, Runtime, Year, Genre, Poster, imdbID },
   } = await instance.get(`?i=${movieId}&apikey=${apiKey}`);
   const movie = new MovieComponent(
     movieId,

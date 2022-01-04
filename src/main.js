@@ -94,58 +94,74 @@ checkMovieTitle(bestBritishMoviesId);
 checkMovieTitle(bestOf2021MoviesId);
 checkMovieTitle(romanticWeekendMoviesId);
 
-const bestOf2021MoviesCollection = {
-  collectionName: 'Best of 2021',
-  collectionDescription: 'Best movies of 2021',
-  movieids: [
-    'tt10370710',
-    'tt0067372',
-    'tt14039582',
-    'tt6817944',
-    'tt8633462',
-    'tt11271038',
-    'tt8430054',
-  ],
-  collectionImage: `src\images\best_of_2021_collection.jpg`,
-  totalLengthInMinutes: checkCollectionLength(bestOf2021MoviesId),
-  movieTitles: checkMovieTitle(bestOf2021MoviesId),
-};
+async function romanticWeekendMoviesCollection() {
+  const romanticWeekendCollection = {
+    collectionName: 'Romantic Weekend',
+    collectionDescription:
+      'Everyone loves love stories. Whether the ending of a romantic movie is happy or sad, the most human stories are those in which we open our hearts and give a piece of them to another person. Here is a collection of the most popular romantic movies that are sure to touch the hearts of all viewers.',
+    movieids: [
+      'tt1243957',
+      'tt0120338',
+      'tt11867884',
+      'tt2452244',
+      'tt7453044',
+      'tt2151010',
+      'tt0376541',
+    ],
+    collectionImage: 'images/romantic_weekend_collection.jpg',
+    totalLengthInMinutes: await checkCollectionLength(romanticWeekendMoviesId),
+    movieTitles: await checkMovieTitle(romanticWeekendMoviesId),
+  };
+  console.log(romanticWeekendCollection);
+  return romanticWeekendCollection;
+}
 
-console.log(bestOf2021MoviesCollection);
+setTimeout(romanticWeekendMoviesCollection, 0);
 
-const bestBritishMoviesCollection = {
-  collectionName: 'Best British Movies',
-  collectionDescription: 'Best british movies',
-  movieids: [
-    'tt0116209',
-    'tt0117951',
-    'tt0127536',
-    'tt0109831',
-    'tt0085859',
-    'tt0082158',
-    'tt0119164',
-  ],
-  collectionImage: `src\images\best_british_collection.jpg`,
-  totalLengthInMinutes: checkCollectionLength(bestBritishMoviesId),
-  movieTitles: checkMovieTitle(bestBritishMoviesId),
-};
+async function bestBritishMoviesCollection() {
+  const bestBritishCollection = {
+    collectionName: 'Best British Movies',
+    collectionDescription:
+      "This special collection of British films proves that English cinema deserves special attention. The best dramas and, of course, exceptionally disarming comedies - you'll find it all in one place now!",
+    movieids: [
+      'tt0116209',
+      'tt0117951',
+      'tt0127536',
+      'tt0109831',
+      'tt0085859',
+      'tt0082158',
+      'tt0119164',
+    ],
+    collectionImage: 'images/best_british_collection.jpg',
+    totalLengthInMinutes: await checkCollectionLength(bestBritishMoviesId),
+    movieTitles: await checkMovieTitle(bestBritishMoviesId),
+  };
+  console.log(bestBritishCollection);
+  return bestBritishCollection;
+}
 
-console.log(bestBritishMoviesCollection);
+setTimeout(bestBritishMoviesCollection, 0);
 
-const romanticWeekendMoviesCollection = {
-  collectionName: 'Romantic Weekend',
-  collectionDescription: 'Movies for romantic weekend',
-  movieids: [
-    'tt1243957',
-    'tt0120338',
-    'tt11867884',
-    'tt2452244',
-    'tt7453044',
-    'tt2151010',
-    'tt0376541',
-  ],
-  collectionImage: `src\images\romantic_weekend_collection.jpg`,
-  totalLengthInMinutes: checkCollectionLength(romanticWeekendMoviesId),
-  movieTitles: checkMovieTitle(romanticWeekendMoviesId),
-};
-console.log(romanticWeekendMoviesCollection);
+async function bestOf2021MoviesCollection() {
+  const bestOf2021Collection = {
+    collectionName: 'Best of 2021',
+    collectionDescription:
+      'The year 2021 is already over, but it surprised with many interesting premieres. We have selected the best and most popular movies and series that premiered this year.Among them there are  comedies, thrillers and romantic movies.',
+    movieids: [
+      'tt10370710',
+      'tt0067372',
+      'tt14039582',
+      'tt6817944',
+      'tt8633462',
+      'tt11271038',
+      'tt8430054',
+    ],
+    collectionImage: 'images/best_of_2021_collection.jpg',
+    totalLengthInMinutes: await checkCollectionLength(bestOf2021MoviesId),
+    movieTitles: await checkMovieTitle(bestOf2021MoviesId),
+  };
+  console.log(bestOf2021Collection);
+  return bestOf2021Collection;
+}
+
+setTimeout(bestOf2021MoviesCollection, 0);

@@ -7,6 +7,10 @@ import './components/footer/footer.css';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 
+const best2021 = "LS_BEST_2021"
+const bestBritish = "LS_BEST_BRIT"
+const bestRomantic = "LS_BEST_ROM"
+
 const apiKey = '46e8c41c';
 const imdbApiClient = axios.create({
   baseURL: 'http://www.omdbapi.com/',
@@ -118,6 +122,7 @@ async function romanticWeekendMoviesCollection() {
     movieTitles: await checkMovieTitle(romanticWeekendMoviesId),
   };
   console.log(romanticWeekendCollection);
+  localStorage.setItem(bestRomantic, JSON.stringify(romanticWeekendCollection));
   return romanticWeekendCollection;
 }
 
@@ -142,6 +147,7 @@ async function bestBritishMoviesCollection() {
     movieTitles: await checkMovieTitle(bestBritishMoviesId),
   };
   console.log(bestBritishCollection);
+  localStorage.setItem(bestBritish, JSON.stringify(bestBritishCollection));
   return bestBritishCollection;
 }
 
@@ -166,7 +172,12 @@ async function bestOf2021MoviesCollection() {
     movieTitles: await checkMovieTitle(bestOf2021MoviesId),
   };
   console.log(bestOf2021Collection);
+  localStorage.setItem(best2021, JSON.stringify(bestOf2021Collection));
   return bestOf2021Collection;
 }
 
 setTimeout(bestOf2021MoviesCollection, 0);
+
+
+
+

@@ -181,7 +181,8 @@ h6 {
     border-radius: 10px;
     background-size: 100%;
     display: flex;
-    align-items:flex-end
+    align-items:flex-end;
+    cursor: pointer;
   }
 
   .opacity {

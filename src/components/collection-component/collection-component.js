@@ -31,7 +31,7 @@ template.innerHTML = `
 
     .collection__section .collection__details .collection__description {
       display: block;
-      font-size: 1.5em;
+      font-size: 1.2em;
       margin-left: 0;
       margin-right: 0;
       font-weight: 500;

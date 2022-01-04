@@ -18,25 +18,20 @@ window.onload = function () {
     .filter((id) => id !== undefined);
 
   let times = 0;
+  let titles = [];
 
   fimls.forEach((element) => {
     const time = element.Runtime.split(' ')[0];
+    const title = element.Title;
     const parsTime = parseInt(time);
     times += parsTime;
+    titles.push(title);
   });
 
   const timePercentages = parseInt(
     (times * 100) / localData.totalLengthInMinutes,
     10
   );
-  console.log(
-    '🚀 ~ file: collection-details.js ~ line 29 ~ timePercentages',
-    timePercentages
-  );
-
-  console.log('🚀 ~ file: collection-details.js ~ line 21 ~ times', times);
-
-  console.log('🚀 ~ file: collection-details.js ~ line 19 ~ fimls', fimls);
 
   function imgImpSearch() {
     if (localData.collectionImage === 'imageBest2021') {
@@ -59,4 +54,7 @@ window.onload = function () {
   ).innerHTML = `Watching time: ${parseInt(times / 60, 10)} hours ${
     times % 60
   } minutes`;
+  document.querySelector(
+    '#collection__progress'
+  ).style.width = `${timePercentages}%`;
 };

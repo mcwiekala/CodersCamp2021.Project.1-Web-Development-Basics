@@ -7,9 +7,9 @@ import './components/footer/footer.css';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 
-const best2021 = "LS_BEST_2021"
-const bestBritish = "LS_BEST_BRIT"
-const bestRomantic = "LS_BEST_ROM"
+const best2021 = 'LS_BEST_2021';
+const bestBritish = 'LS_BEST_BRIT';
+const bestRomantic = 'LS_BEST_ROM';
 
 const apiKey = '46e8c41c';
 const imdbApiClient = axios.create({
@@ -117,7 +117,7 @@ async function romanticWeekendMoviesCollection() {
       'tt2151010',
       'tt0376541',
     ],
-    collectionImage: 'images/romantic_weekend_collection.jpg',
+    collectionImage: 'imageRomantic',
     totalLengthInMinutes: await checkCollectionLength(romanticWeekendMoviesId),
     movieTitles: await checkMovieTitle(romanticWeekendMoviesId),
   };
@@ -142,7 +142,7 @@ async function bestBritishMoviesCollection() {
       'tt0082158',
       'tt0119164',
     ],
-    collectionImage: 'images/best_british_collection.jpg',
+    collectionImage: 'imageBestBritish',
     totalLengthInMinutes: await checkCollectionLength(bestBritishMoviesId),
     movieTitles: await checkMovieTitle(bestBritishMoviesId),
   };
@@ -167,7 +167,7 @@ async function bestOf2021MoviesCollection() {
       'tt11271038',
       'tt8430054',
     ],
-    collectionImage: 'images/best_of_2021_collection.jpg',
+    collectionImage: 'imageBest2021',
     totalLengthInMinutes: await checkCollectionLength(bestOf2021MoviesId),
     movieTitles: await checkMovieTitle(bestOf2021MoviesId),
   };
@@ -177,7 +177,3 @@ async function bestOf2021MoviesCollection() {
 }
 
 setTimeout(bestOf2021MoviesCollection, 0);
-
-
-
-

@@ -1,36 +1,37 @@
-const collection1 = document.querySelector('#collection-1')
-const collection2 = document.querySelector('#collection-2')
-const collection3 = document.querySelector('#collection-3')
+import imageBest2021 from '../../images/best_of_2021_collection.jpg';
+import imageBestBritish from '../../images/best_british_collection.jpg';
+import imageRomantic from '../../images/romantic_weekend_collection.jpg';
 
+const collection1 = document.querySelector('#collection-1');
+const collection2 = document.querySelector('#collection-2');
+const collection3 = document.querySelector('#collection-3');
 
-const bestOf2021MoviesCollection = {
-    collectionName: 'Best of 2021',
-    collectionDescription: 'Best movies of 2021',
-    collectionImage: '../../images/Avengers_Endgame_poster_035_Textless.jpg',
-  };
-  
-  const bestBritishMoviesCollection = {
-    collectionName: 'Best British Movies',
-    collectionDescription: 'Best british movies',
-    collectionImage: '../../images/Avengers_Endgame_poster_035_Textless.jpg',
-  };
-  
-  const romanticWeekendMoviesCollection = {
-    collectionName: 'Romantic Weekend',
-    collectionDescription: 'Movies for romantic weekend',
-    collectionImage: '../../images/Avengers_Endgame_poster_035_Textless.jpg',
-  };
+const best2021 = 'LS_BEST_2021';
+const bestBritish = 'LS_BEST_BRIT';
+const bestRomatic = 'LS_BEST_ROM';
 
+let dataBest2021 = {};
+let dataBestBritish = {};
+let dataBestRomatic = {};
 
+dataBest2021 = JSON.parse(localStorage.getItem(best2021));
+dataBestBritish = JSON.parse(localStorage.getItem(bestBritish));
+dataBestRomatic = JSON.parse(localStorage.getItem(bestRomatic));
 
-collection1.setAttribute('collection-name', bestOf2021MoviesCollection.collectionName)
-collection1.setAttribute('collection-text', bestOf2021MoviesCollection.collectionDescription)
-collection1.setAttribute('img-source', bestOf2021MoviesCollection.collectionImage)
+collection1.setAttribute('collection-name', dataBest2021.collectionName);
+collection1.setAttribute('collection-text', dataBest2021.collectionDescription);
+collection1.setAttribute('img-source', imageBest2021);
 
-collection2.setAttribute('collection-name', bestBritishMoviesCollection.collectionName)
-collection2.setAttribute('collection-text', bestBritishMoviesCollection.collectionDescription)
-collection2.setAttribute('img-source', bestBritishMoviesCollection.collectionImage)
+collection2.setAttribute('collection-name', dataBestBritish.collectionName);
+collection2.setAttribute(
+  'collection-text',
+  dataBestBritish.collectionDescription
+);
+collection2.setAttribute('img-source', imageBestBritish);
 
-collection3.setAttribute('collection-name', romanticWeekendMoviesCollection.collectionName)
-collection3.setAttribute('collection-text', romanticWeekendMoviesCollection.collectionDescription)
-collection3.setAttribute('img-source', romanticWeekendMoviesCollection.collectionImage)
+collection3.setAttribute('collection-name', dataBestRomatic.collectionName);
+collection3.setAttribute(
+  'collection-text',
+  dataBestRomatic.collectionDescription
+);
+collection3.setAttribute('img-source', imageRomantic);

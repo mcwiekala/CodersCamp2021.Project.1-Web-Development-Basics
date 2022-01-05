@@ -6,7 +6,11 @@ import './components/footer/footer.css';
 
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
-import { setBest2021, setBestBritish, setBestRomantic } from './components/collection-component/load-data';
+import {
+  setBest2021,
+  setBestBritish,
+  setBestRomantic,
+} from './components/collection-component/load-data';
 
 const best2021 = 'LS_BEST_2021';
 const bestBritish = 'LS_BEST_BRIT';
@@ -62,12 +66,8 @@ async function checkCollectionLength(collection) {
     totalLength += runtime;
   }
   /* eslint-enable */
-  console.log(`total: ${totalLength}`);
   return totalLength;
 }
-checkCollectionLength(bestBritishMoviesId);
-checkCollectionLength(bestOf2021MoviesId);
-checkCollectionLength(romanticWeekendMoviesId);
 
 async function checkMovieTitle(collection) {
   const movieTitles = [];
@@ -79,12 +79,8 @@ async function checkMovieTitle(collection) {
     movieTitles.push(movieTitle);
   }
   /* eslint-enable */
-  console.log(`${movieTitles}`);
   return movieTitles;
 }
-checkMovieTitle(bestBritishMoviesId);
-checkMovieTitle(bestOf2021MoviesId);
-checkMovieTitle(romanticWeekendMoviesId);
 
 async function romanticWeekendMoviesCollection() {
   const romanticWeekendCollection = {
@@ -108,7 +104,7 @@ async function romanticWeekendMoviesCollection() {
     localStorage.removeItem(bestRomantic);
   }
   localStorage.setItem(bestRomantic, JSON.stringify(romanticWeekendCollection));
-  setBestRomantic()
+  setBestRomantic();
   return romanticWeekendCollection;
 }
 setTimeout(romanticWeekendMoviesCollection, 0);
@@ -164,7 +160,6 @@ async function bestOf2021MoviesCollection() {
   }
   localStorage.setItem(best2021, JSON.stringify(bestOf2021Collection));
   setBest2021();
-  return bestOf2021Collection;
 }
 
 setTimeout(bestOf2021MoviesCollection, 0);

@@ -7,6 +7,7 @@ window.onload = function () {
   const idName = params.get('id');
   const localData = JSON.parse(localStorage.getItem(idName));
   const moviesWatched = JSON.parse(localStorage.getItem('moviesWatched'));
+  console.log(moviesWatched);
   const movies = JSON.parse(localStorage.getItem('Films'));
   const moviesCollection = localData.movieids;
   const filteredArray = moviesWatched.filter((value) =>
@@ -18,12 +19,12 @@ window.onload = function () {
     .filter((id) => id !== undefined);
 
   let times = 0;
-  let titles = [];
+  const titles = [];
 
   fimls.forEach((element) => {
     const time = element.Runtime.split(' ')[0];
     const title = element.Title;
-    const parsTime = parseInt(time);
+    const parsTime = parseInt(time, 10);
     times += parsTime;
     titles.push(title);
   });
@@ -51,7 +52,7 @@ window.onload = function () {
     let listItem;
     let i;
 
-    for (i = 0; i < numberOfListItems; ++i) {
+    for (i = 0; i < numberOfListItems; i += 1) {
       listItem = document.createElement('li');
       listItem.innerHTML = titles[i];
       document.querySelector('.collection__list_pos').appendChild(listItem);

@@ -18,7 +18,7 @@ const bestRomantic = 'LS_BEST_ROM';
 
 const apiKey = '46e8c41c';
 const imdbApiClient = axios.create({
-  baseURL: 'http://www.omdbapi.com/',
+  baseURL: 'https://www.omdbapi.com/',
 });
 
 if (!localStorage.moviesWatched) {

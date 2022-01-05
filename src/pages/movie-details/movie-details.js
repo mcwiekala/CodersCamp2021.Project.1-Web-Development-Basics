@@ -6,7 +6,7 @@ import axios from "axios";
 
 const apiKey = '46e8c41c';
 const instance = axios.create({
-  baseURL: 'http://www.omdbapi.com/',
+  baseURL: 'https://www.omdbapi.com/',
 });
 
 const setDetailsData = async() => {

@@ -13,7 +13,7 @@ import Footer from '../../components/footer/footer';
 const moviesSection = document.querySelector('.movies-section');
 const apiKey = '46e8c41c';
 const instance = axios.create({
-  baseURL: 'http://www.omdbapi.com/',
+  baseURL: 'https://www.omdbapi.com/',
 });
 
 const moviesId = [

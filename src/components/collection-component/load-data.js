@@ -22,6 +22,7 @@ const setBest2021 = () => {
     dataBest2021.collectionDescription
   );
   collection1.setAttribute('img-source', imageBest2021);
+  collection1.setAttribute('collection-link', '../collection-details/?id=LS_BEST_2021');
 };
 
 const setBestBritish = () => {
@@ -32,6 +33,7 @@ const setBestBritish = () => {
     dataBestBritish.collectionDescription
   );
   collection2.setAttribute('img-source', imageBestBritish);
+  collection2.setAttribute('collection-link', '../collection-details/?id=LS_BEST_BRIT');
 };
 
 const setBestRomantic = () => {
@@ -42,6 +44,7 @@ const setBestRomantic = () => {
     dataBestRomatic.collectionDescription
   );
   collection3.setAttribute('img-source', imageRomantic);
+  collection3.setAttribute('collection-link', '../collection-details/?id=LS_BEST_ROM');
 };
 
 export { setBest2021, setBestBritish, setBestRomantic };

@@ -84,7 +84,7 @@ async function romanticWeekendMoviesCollection() {
     collectionDescription:
       'Everyone loves love stories. Whether the ending of a romantic movie is happy or sad, the most human stories are those in which we open our hearts and give a piece of them to another person. Here is a collection of the most popular romantic movies that are sure to touch the hearts of all viewers.',
     movieids: romanticWeekendMoviesId,
-    collectionImage: 'images/romantic_weekend_collection.jpg',
+    collectionImage: 'imageRomantic',
     totalLengthInMinutes: await checkCollectionLength(romanticWeekendMoviesId),
     movieTitles: await checkMovieTitle(romanticWeekendMoviesId),
   };
@@ -103,7 +103,7 @@ async function bestBritishMoviesCollection() {
     collectionDescription:
       "This special collection of British films proves that English cinema deserves special attention. The best dramas and, of course, exceptionally disarming comedies - you'll find it all in one place now!",
     movieids: bestBritishMoviesId,
-    collectionImage: 'images/best_british_collection.jpg',
+    collectionImage: 'imageBestBritish',
     totalLengthInMinutes: await checkCollectionLength(bestBritishMoviesId),
     movieTitles: await checkMovieTitle(bestBritishMoviesId),
   };
@@ -122,7 +122,7 @@ async function bestOf2021MoviesCollection() {
     collectionDescription:
       'The year 2021 is already over, but it surprised with many interesting premieres. We have selected the best and most popular movies and series that premiered this year.Among them there are  comedies, thrillers and romantic movies.',
     movieids: bestOf2021MoviesId,
-    collectionImage: 'images/best_of_2021_collection.jpg',
+    collectionImage: 'imageBest2021',
     totalLengthInMinutes: await checkCollectionLength(bestOf2021MoviesId),
     movieTitles: await checkMovieTitle(bestOf2021MoviesId),
   };

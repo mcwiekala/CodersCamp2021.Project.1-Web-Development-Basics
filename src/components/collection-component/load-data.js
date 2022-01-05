@@ -14,14 +14,15 @@ let dataBest2021 = {};
 let dataBestBritish = {};
 let dataBestRomatic = {};
 
-
-
 const setBest2021 = () => {
   dataBest2021 = JSON.parse(localStorage.getItem(best2021));
   collection1.setAttribute('collection-name', dataBest2021.collectionName);
-  collection1.setAttribute('collection-text', dataBest2021.collectionDescription);
+  collection1.setAttribute(
+    'collection-text',
+    dataBest2021.collectionDescription
+  );
   collection1.setAttribute('img-source', imageBest2021);
-}
+};
 
 const setBestBritish = () => {
   dataBestBritish = JSON.parse(localStorage.getItem(bestBritish));
@@ -31,7 +32,7 @@ const setBestBritish = () => {
     dataBestBritish.collectionDescription
   );
   collection2.setAttribute('img-source', imageBestBritish);
-}
+};
 
 const setBestRomantic = () => {
   dataBestRomatic = JSON.parse(localStorage.getItem(bestRomatic));
@@ -41,6 +42,6 @@ const setBestRomantic = () => {
     dataBestRomatic.collectionDescription
   );
   collection3.setAttribute('img-source', imageRomantic);
-}
+};
 
-export { setBest2021, setBestBritish, setBestRomantic }
+export { setBest2021, setBestBritish, setBestRomantic };

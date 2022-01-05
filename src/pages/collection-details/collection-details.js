@@ -9,10 +9,9 @@ window.onload = function () {
 
   let moviesWatched = localStorage.getItem('moviesWatched');
   if (moviesWatched === '') {
-    moviesWatched = [];
+    moviesWatched = '[]';
   }
   moviesWatched = JSON.parse(moviesWatched);
-
   const movies = JSON.parse(localStorage.getItem('Films'));
   const moviesCollection = localData.movieids;
   const filteredArray = moviesWatched.filter((value) =>

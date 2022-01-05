@@ -14,27 +14,37 @@ let dataBest2021 = {};
 let dataBestBritish = {};
 let dataBestRomatic = {};
 
-dataBest2021 = JSON.parse(localStorage.getItem(best2021));
-dataBestBritish = JSON.parse(localStorage.getItem(bestBritish));
-dataBestRomatic = JSON.parse(localStorage.getItem(bestRomatic));
+const setBest2021 = () => {
+  dataBest2021 = JSON.parse(localStorage.getItem(best2021));
+  collection1.setAttribute('collection-name', dataBest2021.collectionName);
+  collection1.setAttribute(
+    'collection-text',
+    dataBest2021.collectionDescription
+  );
+  collection1.setAttribute('img-source', imageBest2021);
+  collection1.setAttribute('collection-link', '../collection-details/?id=LS_BEST_2021');
+};
 
-collection1.setAttribute('collection-name', dataBest2021.collectionName);
-collection1.setAttribute('collection-text', dataBest2021.collectionDescription);
-collection1.setAttribute('img-source', imageBest2021);
-collection1.setAttribute('collection-link', '../collection-details/?id=LS_BEST_2021');
+const setBestBritish = () => {
+  dataBestBritish = JSON.parse(localStorage.getItem(bestBritish));
+  collection2.setAttribute('collection-name', dataBestBritish.collectionName);
+  collection2.setAttribute(
+    'collection-text',
+    dataBestBritish.collectionDescription
+  );
+  collection2.setAttribute('img-source', imageBestBritish);
+  collection2.setAttribute('collection-link', '../collection-details/?id=LS_BEST_BRIT');
+};
 
-collection2.setAttribute('collection-name', dataBestBritish.collectionName);
-collection2.setAttribute(
-  'collection-text',
-  dataBestBritish.collectionDescription
-);
-collection2.setAttribute('img-source', imageBestBritish);
-collection2.setAttribute('collection-link', '../collection-details/?id=LS_BEST_BRIT');
+const setBestRomantic = () => {
+  dataBestRomatic = JSON.parse(localStorage.getItem(bestRomatic));
+  collection3.setAttribute('collection-name', dataBestRomatic.collectionName);
+  collection3.setAttribute(
+    'collection-text',
+    dataBestRomatic.collectionDescription
+  );
+  collection3.setAttribute('img-source', imageRomantic);
+  collection3.setAttribute('collection-link', '../collection-details/?id=LS_BEST_ROM');
+};
 
-collection3.setAttribute('collection-name', dataBestRomatic.collectionName);
-collection3.setAttribute(
-  'collection-text',
-  dataBestRomatic.collectionDescription
-);
-collection3.setAttribute('img-source', imageRomantic);
-collection3.setAttribute('collection-link', '../collection-details/?id=LS_BEST_ROM');
+export { setBest2021, setBestBritish, setBestRomantic };

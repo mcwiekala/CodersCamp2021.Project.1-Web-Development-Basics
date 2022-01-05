@@ -4,22 +4,20 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/CodersCamp2021.Project.Web-Development-Basics/assets/favicon.0fe6b309.png" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Films</title>
   
   
+  
+  <title>Film Book</title>
 
-  <!-- LINK TO DEFAULT STYLESHEET -->
-  <!-- CONNECT GOOGLE FONTS & FETCH - LATO FONT FAMILY -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;0,900;1,100;1,300;1,700;1,900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <script type="module" crossorigin src="/CodersCamp2021.Project.Web-Development-Basics/assets/films.53891924.js"></script>
+    rel="stylesheet">
+  <script type="module" crossorigin src="/CodersCamp2021.Project.Web-Development-Basics/assets/collections.076de583.js"></script>
     <link rel="modulepreload" href="/CodersCamp2021.Project.Web-Development-Basics/assets/style.3ebcdd82.js">
+    <link rel="modulepreload" href="/CodersCamp2021.Project.Web-Development-Basics/assets/main.d702b943.js">
     <link rel="modulepreload" href="/CodersCamp2021.Project.Web-Development-Basics/assets/vendor.a6cc7faa.js">
     <link rel="modulepreload" href="/CodersCamp2021.Project.Web-Development-Basics/assets/footer.645e5149.js">
     <link rel="stylesheet" href="/CodersCamp2021.Project.Web-Development-Basics/assets/style.c8b3b4e2.css">
@@ -30,13 +28,11 @@
   <header-component></header-component>
   <main>
     <div class="movie-wrapper">
-      <div class="header-wrapper">
-        <h1 class="text-purple movie-section-header">FILMS</h1>
-      </div>
-      <div class="section movies-section"></div>
+      <collection-component id="collection-1"></collection-component>
+      <collection-component id="collection-2"></collection-component>
+      <collection-component id="collection-3"></collection-component>
     </div>
   </main>
   <footer-component></footer-component>
 </body>
-
 </html>

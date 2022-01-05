@@ -46,6 +46,18 @@ window.onload = function () {
     return imageBest2021;
   }
 
+  function movieList() {
+    const numberOfListItems = titles.length;
+    let listItem;
+    let i;
+
+    for (i = 0; i < numberOfListItems; ++i) {
+      listItem = document.createElement('li');
+      listItem.innerHTML = titles[i];
+      document.querySelector('.collection__list_pos').appendChild(listItem);
+    }
+  }
+
   document.querySelector('.collection__progress_name').innerHTML =
     localData.collectionName;
   document.querySelector('.collection__image_src').src = imgImpSearch();
@@ -57,4 +69,5 @@ window.onload = function () {
   document.querySelector(
     '#collection__progress'
   ).style.width = `${timePercentages}%`;
+  movieList();
 };

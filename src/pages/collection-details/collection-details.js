@@ -6,8 +6,13 @@ window.onload = function () {
   const params = new URL(window.location).searchParams;
   const idName = params.get('id');
   const localData = JSON.parse(localStorage.getItem(idName));
-  const moviesWatched = JSON.parse(localStorage.getItem('moviesWatched'));
-  console.log(moviesWatched);
+
+  let moviesWatched = localStorage.getItem('moviesWatched');
+  if (moviesWatched === '') {
+    moviesWatched = [];
+  }
+  moviesWatched = JSON.parse(moviesWatched);
+
   const movies = JSON.parse(localStorage.getItem('Films'));
   const moviesCollection = localData.movieids;
   const filteredArray = moviesWatched.filter((value) =>
